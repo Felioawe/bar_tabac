@@ -1,0 +1,182 @@
+
+
+
+
+
+
+
+
+
+* { margin: 0; padding: 0; box-sizing: border-box;}
+ body {background: url(../assets/bg\ ampoule.jpg) center/contain fixed!important;}
+.mt--150 {margin-top: -150px;}
+.mb--145 {margin-bottom: -145px;}
+.me-128 {margin-right: 128px;}
+.ms-128 {margin-left: 128px !important;}
+.radius-11 {border-radius: 11px !important;}
+.radius-25 {border-radius: 25px !important;}
+.radius-100 {border-radius: 100px !important;}
+.shadow1 {box-shadow: 7px 7px 9px 0 rgb(0 0 0 /30%) !important;}
+.shadow2 {box-shadow: 14px 15px 12px 5px rgb(0 0 0 / 90%) !important;}
+.w-85 {width: 85%;}
+.w-80 {width: 80%;}
+.w-30 {width: 30%;}
+.w-20 {width: 20%;}
+.w-10 {width: 10%;}
+.h-10 {height: 10px;}
+.h-70 {height: 70px;}
+.h-100 {height: 100%;}
+.h-116 {height: 116px;}
+.h-150 {height: 150px;}
+.h-200 {height: 200px;}
+.h-645 {height: 645px;}
+.h-300 {height: 300px;}
+.h-400 {height: 400px;}
+.h-500 {height: 500px;}
+.h-540 {height: 540px;}
+.h-600 {height: 600px;}
+.fs-60 {font-size: 60px;}
+.logo-profil {height: 100px; width:100px;} 
+.logo {height: 60px; width:150px;}
+.bg-gray {background: rgb(48, 48, 49);}
+.text-red {color: rgb(117, 4, 4);}
+.text-or {color: #c5a154;}
+.text-or-h:hover {color: rgb(197, 161, 84) !important; transition: 0.5s;}
+.text-jaune-f {color: rgb(253, 183, 1);}
+.text-jaune-fh:hover {color: rgb(253, 183, 1) !important; transition: 0.5s;}
+.text-white-h:hover {color: #fff !important; transition: 0.5s;}
+.bg-red {background: rgb(117, 4, 4) !important;}
+.bg-gray {background: #1c1c1c;}
+.bg-or {background: #c5a154;}
+.bg-gray-ligth {background: #292929;}
+.bg-white-h:hover{background: #fff !important; transition: 0.5s;}
+.bg-black-b {background: #000; border-bottom: 2px solid rgb(82, 81, 81); border-left: none; border-right: none; transition: 0.5s}
+.bg-black-transparant {background: rgba(0, 0, 0, 0.6);}
+.bg-red-h:hover {background: rgb(117, 4, 4) !important; transition: 0.5s;}
+.bg-red-hb:hover {background: rgb(117, 4, 4); border-bottom: 2px solid transparent ; border-left: none; border-right: none; }
+.border-black-h:hover {background: #000; transition: 0.8s;}
+.border-red {border: 2px solid rgb(117, 4, 4) !important;}
+.border-gray {border: 2px solid rgb(82, 81, 81);}
+.border-white {border: 2px solid #fff;}
+
+h2 {position: relative;}
+.afert1:after {position:absolute; content:""; bottom: 0; left: -5%; height: 1.5px; width: 105%; background: #c5a154;}
+.afert2:after {position:absolute; content:""; bottom: -6px; left: -10%; height: 2.3px; width: 115%; background: #c5a154;}
+
+/* *************************************************************** header *************************************************************** */
+.menu {background: #000 !important; position: fixed; z-index: 2; width: 100%;}
+.menuAdmi {position: fixed; z-index: 3; top:116px; right: 0; height: 100vh; width: 0px; transition: all 0.5s ease-in-out;}
+
+.butDisconnect {text-decoration: none; border: 1px solid #292929; border-radius: 25px; padding: 5px 10px; color: rgb(88, 88, 88); transition: 0.5s;}
+.butDisconnect:hover {text-decoration: none; border: 1px solid #fff; color:rgb(150, 0, 0);}
+.openBurger .menuAdmi{width: 280px; transition: all 0.5s ease-in-out;}
+.butBurger {background: url(../assets/icon_engrenage.png) center/contain; border: 0px solid transparent; border-radius: 25px;}
+
+.container-sous-menu a {text-decoration: none; width: 100%; border: 1px solid #292929; background: #000; color:rgb(88, 88, 88); padding: 2px 0; transition: 0.5s;}
+.container-sous-menu a:hover {border: 1px solid #fff; background: rgb(100, 0, 0); color: #fff; transition: 0.5s;}
+
+.menu-secondaire-1, .menu-secondaire-2, .menu-secondaire-3, .menu-secondaire-4, .menu-secondaire-5, .menu-secondaire-6 {display: flex; flex-direction: column; text-align: center;}
+.menu-secondaire-1 a, .menu-secondaire-2 a, .menu-secondaire-3 a, .menu-secondaire-4 a, .menu-secondaire-5 a, .menu-secondaire-6 a {padding: 10px 0;}
+
+.sous-menu-1, .sous-menu-2, .sous-menu-3, .sous-menu-4, .sous-menu-5, .sous-menu-6 {overflow-x: hidden;}
+.sous-menu-1 a, .sous-menu-2 a, .sous-menu-3 a, .sous-menu-4 a, .sous-menu-5 a, .sous-menu-6 a {transition: 0.5s; padding-left: 20px;}
+.sous-menu-1 a:hover, .sous-menu-2 a:hover, .sous-menu-3 a:hover, .sous-menu-4 a:hover, .sous-menu-5 a:hover, .sous-menu-6 a:hover {margin-left: 10px; width: auto; transition: 0.5s;}
+
+.menu-secondaire-1 ~ .sous-menu-1, .menu-secondaire-2 ~ .sous-menu-2, .menu-secondaire-3 ~ .sous-menu-3, .menu-secondaire-4 ~ .sous-menu-4, .menu-secondaire-5 ~ .sous-menu-5, .menu-secondaire-6 ~ .sous-menu-6 {max-height: 0; overflow-y: hidden; display: flex; flex-direction: column; transition: all 0.8s;}
+.container-menu-secondaire-1:hover .sous-menu-1, .container-menu-secondaire-2:hover .sous-menu-2, .container-menu-secondaire-3:hover .sous-menu-3, .container-menu-secondaire-4:hover .sous-menu-4, .container-menu-secondaire-5:hover .sous-menu-5, .container-menu-secondaire-6:hover .sous-menu-6 {max-height: 200px; transition: all 1.5s ease-in-out;}
+
+
+
+@keyframes rotating {
+
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+.animation {animation: rotating 2s linear infinite;}
+
+/* *************************************************************** modal *************************************************************** */
+.overlay {z-index: 3 !important; display: flex; justify-content: center; align-items: center; position: fixed; top: 0; left: 0; height: 100%; width: 100%; background: rgba( 0, 0, 0, 0.8); animation: overlay-fondu .7s both ;}
+.mod {padding: 20px; max-width: calc(100vw - 150px); max-height: calc(100vh - 150px); width: 600px; animation: mod-glisser-bas .7s both ;}
+.overlay[aria-hidden="true"] {animation-direction: reverse;}
+.overlay[aria-hidden="true"] .mod {animation-direction: reverse;}
+
+@keyframes overlay-fondu {from {opacity: 0;} to {opacity: 1;}}
+@keyframes mod-glisser-bas {from {transform: translateY(-50px);} to {transform: translateY(0px);} }
+
+/* *************************************************************** home *************************************************************** */
+/* *************************************************************** home section1 *************************************************************** */
+
+.img-svf1 {position: relative; background: url(../assets/bouteille_alcool.png) center/cover; height: 215px; width: 100% !important;}
+.img-svf2 {position: relative; background: url(../assets/bouteille_bieres.png) center/cover; height: 215px; width: 100% !important;}
+.img-svf3 {position: relative; background: url(../assets/bouteille_soft.png) center/cover; height: 215px; width: 100% !important;}
+.h-black {display: flex; justify-content: center; align-items: center; position: absolute; background-color: rgba(0, 0, 0, 0.667); top: 0; left: 0; height: 100%; width: 100%; color: #fff; transition: 0.5s; opacity: 0;}
+.h-black:hover { opacity: 1;}
+
+.block-or { position: relative; background: #c5a154; color: white; font-size: 15px; height: 400px; } 
+.block1-black { background: #000; color: white; height: 250px; } 
+.block2-black { background: #000; color: white; font-size: 15px; height: 250px; } 
+
+/* *************************************************************** home section2 *************************************************************** */
+.section2-bg {background: url(http://www.themesindustry.com/html/bistro/images/bg-facts.jpg) fixed center/cover;}
+
+/* *************************************************************** home section3 *************************************************************** */
+.la-carte {background: #000; border:5px solid #c5a154; display: flex; flex-direction: column; align-items: center; color: #fff;}
+.cadre-or {background: #000; border:5px solid #c5a154; color: #fff;}
+.objet-fit {}
+.text-ellipsis {text-overflow: ellipsis;}
+/* *************************************************************** compte *************************************************************** */
+.container-compte {padding: 0 12px;}
+
+
+
+
+
+
+
+.icon{
+    background: rgb(253, 183, 1);
+    border: 3px solid rgb(253, 183, 1);
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    transition: 0.8s;
+}
+
+.icon:hover {
+    background: #111111;
+    border: 3px solid #111111;
+}
+
+.icon-reseaux-f {color: #585858; border: 1px solid #585858; border-radius: 100%; padding: 7px 12px; transition: 0.5s;}
+.icon-reseaux {color: #585858; border: 1px solid #585858; border-radius: 100%; padding: 7px 8px; transition: 0.5s;}
+
+.icon-reseaux-f:hover {color: rgb(197,161,84); border: 1px solid rgb(197,161,84); transition: 0.5s;}
+.icon-reseaux:hover {color: rgb(197,161,84); border: 1px solid rgb(197,161,84); transition: 0.5s;}
+
+.article-card {position: relative; width: 100%; height: 300px;}
+.article-card-but {background: #000; color: #c5a154; border: 2px solid #c5a154; padding: 8px 6px; transition: 0.5s;}
+.article-card-but:hover {background: #c5a154; color: #fff; transition: 0.5s; }
+.article-card-h{position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba( 0, 0, 0, 0.8); opacity: 0; transition: 0.5s;}
+.article-card-h:hover { opacity: 1;}
+
+.bg-pizza {background: url(../assets/pizza.jpg) center/cover no-repeat; width: 100%;}
+
+.bg-pasta {background: url(../assets/pasta.jpeg) center/cover no-repeat; width: 100%;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
