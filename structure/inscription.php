@@ -1,5 +1,5 @@
-<form class="bg-gray border-white w-100" action="./requette/insert_user.php" enctype="multipart/form-data" method="POST">
-    <div class="bg-gray text-white text-uppercase w-100 px-5 py-3">
+<form class="cadre-or w-100" action="./requette/insert_user.php" enctype="multipart/form-data" method="POST">
+    <div class="text-white text-uppercase w-100 px-5 py-3">
         <h2 class="text-center">Inscription</h2>
         <div>
             <label for="name">Non :</label><br>

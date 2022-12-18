@@ -1,7 +1,7 @@
 <div id="mod2" class="overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="title-mod" style="display: none;">
     <div class="mod js-stop w-50 m-auto px-5">
-        <button class="js-modal-close px-2">x</button>
-        <form class="bg-white" action="./requette/insert_user.php" enctype="multipart/form-data" method="POST">
+        <form class="cadre-or" action="./requette/insert_user.php" enctype="multipart/form-data" method="POST">
+            <button class="js-modal-close px-2">x</button>
             <div class="border border-dark px-5 py-3">
                 <h2 class="text-center">inscription</h2>
                 <div>

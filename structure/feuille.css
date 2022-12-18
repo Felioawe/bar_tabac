@@ -29,6 +29,7 @@
 .h-116 {height: 116px;}
 .h-150 {height: 150px;}
 .h-200 {height: 200px;}
+.h-250 {height: 250px;}
 .h-645 {height: 645px;}
 .h-300 {height: 300px;}
 .h-400 {height: 400px;}
@@ -122,8 +123,7 @@ h2 {position: relative;}
 /* *************************************************************** home section3 *************************************************************** */
 .la-carte {background: #000; border:5px solid #c5a154; display: flex; flex-direction: column; align-items: center; color: #fff;}
 .cadre-or {background: #000; border:5px solid #c5a154; color: #fff;}
-.objet-fit {}
-.text-ellipsis {text-overflow: ellipsis; }
+
 /* *************************************************************** compte *************************************************************** */
 .container-compte {padding: 0 12px;}
 
@@ -153,15 +153,33 @@ h2 {position: relative;}
 .icon-reseaux-f:hover {color: rgb(197,161,84); border: 1px solid rgb(197,161,84); transition: 0.5s;}
 .icon-reseaux:hover {color: rgb(197,161,84); border: 1px solid rgb(197,161,84); transition: 0.5s;}
 
-.article-card {position: relative; width: 100%; height: 300px;}
-.article-card-but {background: #000; color: #c5a154; border: 2px solid #c5a154; padding: 8px 6px; transition: 0.5s;}
-.article-card-but:hover {background: #c5a154; color: #fff; transition: 0.5s; }
-.article-card-h{position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba( 0, 0, 0, 0.8); opacity: 0; transition: 0.5s;}
-.article-card-h:hover { opacity: 1;}
+
+
+
+.cards {overflow: hidden; border-radius: 11px; box-shadow: 14px 15px 12px 5px rgb(0 0 0 / 90%);}
+.cards-img {position: relative; object-fit: cover;}
+.cards-img img {object-fit: cover;}
+.cards-h {position: absolute; padding: 10px 10px; text-decoration: none; top: 0; left: 0; display:flex; justify-content: center; align-items: center; text-align: center;  width: 100%; height: 100%; background: rgba( 0, 0, 0, 0.8); opacity: 0; color: #c5a154; text-transform: uppercase; transition: 0.5s;}
+.cards-h:hover { opacity: 1;}
+.cards-h h4 {color: #c5a154;}
+.cards-text {height: 130px; padding: 10px 10px; background: #fff; color: #000; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+
+
+.cards-but {background: #000; color: #c5a154; border: 2px solid #c5a154; padding: 8px 6px; transition: 0.5s;}
+.cards-but:hover {background: #c5a154; color: #fff; transition: 0.5s; }
+
+
+.butDelete {text-decoration: none; border: 1px solid #292929; border-radius: 25px; padding: 5px 10px; color: rgb(88, 88, 88); transition: 0.5s;}
+.butDelete:hover {text-decoration: none; border: 1px solid #fff; color:rgb(150, 0, 0);}
+.butUpdate {text-decoration: none; border: 1px solid #292929; border-radius: 25px; padding: 5px 10px; color: rgb(88, 88, 88); transition: 0.5s;}
+.butUpdate:hover {text-decoration: none; border: 1px solid #fff; color:rgb(150, 92, 0);}
+.butAdd {text-decoration: none; border: 1px solid #292929; border-radius: 25px; padding: 5px 10px; color: rgb(88, 88, 88); transition: 0.5s;}
+.butAdd:hover {text-decoration: none; border: 1px solid #fff; color:rgb(0, 79, 163);}
 
 .bg-pizza {background: url(../assets/pizza.jpg) center/cover no-repeat; width: 100%;}
 
 .bg-pasta {background: url(../assets/pasta.jpeg) center/cover no-repeat; width: 100%;}
+
 
 
 

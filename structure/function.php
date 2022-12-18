@@ -25,20 +25,20 @@ function get_article($db,$nb) {
 
 function article($add) {
     return '<div class="col-12 col-lg-3 p-3">
-            <div class="cont-article-card radius-11 overflow-hidden shadow2">
-                <div class="article-card position-relative">
-                <img class="w-100 h-300" src="./upload/'.$add['img'].'" alt="">
-                    <div class="article-card-h position-absolute d-flex flex-column justify-content-center align-items-center">
-                        <h4 class="text-uppercase text-or">'.$add['titre'].'</h4>
-                        <a href="#"><i class="fa fa-plus text-white"></i></a>
+                <div class="cards">
+                    <div class="cards-img">
+                        <img class="w-100 h-250" src="./upload/'.$add['img'].'" alt="">
+                        <a href="#" class="cards-h">
+                             <h4>'.$add['titre'].'</h4>
+                        </a>
+                    </div>
+                    <div class="cards-text">
+                       <h4>'.$add['titre'].'</h3>
+                        <p>'.$add['mes'].'</p>
+                        <p>'.$add['date'].'</p>
                     </div>
                 </div>
-                <div class="bg-white px-3 py-2">
-                    <h4 class="text-black text-ellipsis">'.$add['titre'].'</h3>
-                    <p class="text-black text-ellipsis">'.$add['mes'].'</p>
-                </div>
-            </div>
-        </div>';
+            </div>';
 
 }
 ?>

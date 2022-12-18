@@ -12,8 +12,8 @@ if (isset($_GET["id"]) && !empty($_GET["id"])) {
     $up_user = $req2->fetch(PDO::FETCH_ASSOC);
 }
 ?>
-<form class="bg-gray border-white w-100" action="./requette/update_user.php?id=<?= $id ?>" enctype="multipart/form-data" method="POST">
-    <div class="bg-gray text-white text-uppercase w-100 px-5 py-3">
+<form class="cadre-or w-100" action="./requette/update_user.php?id=<?= $id ?>" enctype="multipart/form-data" method="POST">
+    <div class="text-white text-uppercase w-100 px-5 py-3">
         <h2 class="text-center">Modifier</h2>
         <div>
             <label for="name">Non :</label><br>

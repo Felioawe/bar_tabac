@@ -192,7 +192,7 @@
     </div>
 </section>
 
-<section class="section-5 la-carte shadow1 p-3 mt-5 w-85 m-auto">
+<section class="section-5 cadre-or shadow1 p-3 mt-5 w-85 m-auto">
     <h2 class="w-25 text-center m-auto text-white afert1 pb-2 px-0">Nos Evenements</h2>
     <h2 class="w-25 m-auto afert2"></h2>
     <?php $result = get_article($db, 4); ?>
@@ -204,7 +204,7 @@
         </div>
     </div>
     <div class="text-center my-4">
-        <a class="article-card-but radius-11 text-decoration-none text-uppercase fs-6 mb-2" href="./evenement.php">Evenement</a>
+        <a class="cards-but radius-11 text-decoration-none text-uppercase fs-6 mb-2" href="./evenement.php">Evenement</a>
     </div>
 </section>
 
