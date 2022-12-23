@@ -38,6 +38,9 @@ if (isset($_GET["id"]) && !empty($_GET["id"])) {
         <?php require_once "./structure/inscription.php"; ?>
     </div>
     <div class="<?= $col2 ?>">
+    <div class="cadre-or border-bottom-0">
+        <p class="text-uppercase fw-bold fs-4 text-center m-0 py-2">Compte</p>
+    </div>
         <table class="cadre-or text-center w-100">
             <thead class="cadre-or">
                 <tr class="bg-muted text-uppercase">

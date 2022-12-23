@@ -58,7 +58,7 @@
                     </div>
                 </div>
                 <div>
-                    <button type="submit" class="text-uppercase text-white bg-red border-0 py-1 px-3">envoyer</button>
+                    <button type="submit" class="contact-but text-uppercase py-1 px-3">envoyer</button>
                 </div>
             </form>
         </div>

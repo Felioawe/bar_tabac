@@ -23,15 +23,18 @@ require_once "./structure/function.php";
         <div class="w-50 m-auto">
             <div class="d-flex flex-column cadre-or text-white p-4 my-5">
                 <form action="./requette/insert_article.php" enctype="multipart/form-data" method="POST">
-                    <h1 class="text-center">Article</h1>
+                    <div class="w-25 m-auto text-center">
+                        <h2 class="afert1 m-0 pb-2">Article</h2>
+                        <h2 class="afert2"></h2>
+                    </div>
                     <div class="d-flex flex-column">
                         <div>
                             <label for="titre">Titre :</label><br>
-                            <input type="text" name="titre" id="titre">
+                            <input class="bg-gray text-white" type="text" name="titre" id="titre">
                         </div>
                         <div>
                             <label for="mes">Votre message :</label><br>
-                            <textarea class="w-100" name="mes" id="mes" cols="30" rows="10"></textarea>
+                            <textarea class="bg-gray text-white w-100" name="mes" id="mes" cols="30" rows="10"></textarea>
                         </div>
                         <div>
                             <input type="hidden" name="id_user" value="<?= $_SESSION['id_user']; ?>">
@@ -43,7 +46,7 @@ require_once "./structure/function.php";
                             <input class="my-4" type="file" name="img" id="img">
                         </div>
                         <div>
-                            <input class="w-100" type="submit" value="Ajouter">
+                            <input class="butAdd bg-gray rounded-2 w-100" type="submit" value="Ajouter">
                         </div>
                     </div>
                 </form>

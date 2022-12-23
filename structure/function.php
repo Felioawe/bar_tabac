@@ -33,9 +33,9 @@ function article($add) {
                         </a>
                     </div>
                     <div class="cards-text">
-                       <h4>'.$add['titre'].'</h3>
-                        <p>'.$add['mes'].'</p>
-                        <p>'.$add['date'].'</p>
+                       <h5 class="cards-titre">'.$add['titre'].'</h5>
+                        <p class="cards-mes">'.$add['mes'].'</p>
+                        <p class="cards-date">'.$add['date'].'</p>
                     </div>
                 </div>
             </div>';
