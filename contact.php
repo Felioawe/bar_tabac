@@ -25,9 +25,7 @@
                     <p>......................<br>......................</p>
                 </div>
                 <div>
-                    <div>
-                        <img class="photo2-contact" src="./assets/profil1.png" alt="">
-                    </div>
+                    <iframe class="mt-2" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1327.4966035871378!2d5.1674216723691035!3d43.475409979932266!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc3bf54a86c779214!2sBar%20Tabac%20PMU%20Le%20Bistrot!5e0!3m2!1sfr!2sfr!4v1664117008575!5m2!1sfr!2sfr" width="100%" height="200" style="border: 1px solid black;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>

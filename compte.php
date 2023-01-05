@@ -39,7 +39,7 @@ if (isset($_GET["id"]) && !empty($_GET["id"])) {
     </div>
     <div class="<?= $col2 ?>">
     <div class="cadre-or border-bottom-0">
-        <p class="text-uppercase fw-bold fs-4 text-center m-0 py-2">Compte</p>
+        <h1 class="text-uppercase fs-4 text-center m-0 py-2">Compte</h1>
     </div>
         <table class="cadre-or text-center w-100">
             <thead class="cadre-or">

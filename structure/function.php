@@ -7,7 +7,7 @@ function get_article($db,$nb) {
         
         $req = $db->prepare($sql);
         
-        $req->execute([':nb' => $nb]); 
+        $req->execute(); 
     } 
     
     else {

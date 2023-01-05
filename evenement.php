@@ -1,4 +1,4 @@
-<?php $title = "BLOG"; ?>
+<?php $title = "NOS EVENEMENTS"; ?>
 <?php
 require_once "./structure/header.php";
 require_once "./requette/config.php";
@@ -6,8 +6,6 @@ require_once "./structure/function.php";
 ?>
 
 <section class="la-carte shadow1 p-3 mt-5 w-85 m-auto">
-    <h2 class="w-25 text-center m-auto text-white afert1 pb-2 px-0">Nos Evenements</h2>
-    <h2 class="w-25 m-auto afert2"></h2>
     <?php $result = get_article($db, 0); ?>
     <div class="container-fluid bg-or my-5">
         <div class="row">

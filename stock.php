@@ -9,7 +9,7 @@
         </div>
         <div class="col-9 mx-auto">
             <div class="cadre-or border-bottom-0">
-                <p class="text-uppercase fw-bold fs-4 text-center m-0 py-2">Stock</p>
+                <h1 class="text-uppercase fs-4 text-center m-0 py-2">Stock</h1>
             </div>
             <table class="cadre-or text-center w-100">
                 <thead>
@@ -39,6 +39,23 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
+    </div>
+</div>
+<div class="col-3 row g-0 d-flex flex-column">
+    <div class="col-4 img-svf1">
+        <div class="h-black">
+            <p>Alcool</p>
+        </div>
+    </div>
+    <div class="col-4 img-svf2">
+        <div class="h-black">
+            <p>Bière</p>
+        </div>
+    </div>
+    <div class="col-4 img-svf3">
+        <div class="h-black">
+            <p>Non-alcool</p>
         </div>
     </div>
 </div>

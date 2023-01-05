@@ -2,19 +2,19 @@
 <?php require_once "./structure/header.php"; ?>
 
 <section class="section-1 w-85 m-auto my-5 g-0">
-    <div class="row shadow1">
+    <div class="row g-0 cadre-or-2 shadow1">
         <div class="col-6 row flex-column g-0">
-            <div class="col-12 block1-red g-0">
+            <div class="block1-red g-0">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="./assets/istockphoto-157435413-1024x1024.jpg" class="h-400 w-100" alt="...">
+                            <img src="./assets/bar.png" class="h-400 w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="./assets/istockphoto-688451514-1024x1024.jpg" class="h-400 w-100" alt="...">
+                            <img src="./assets/barista.jpg" class="h-400 w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="./assets/tonneau.jpg" class="h-400 w-100" alt="...">
+                            <img src="./assets/tee.jpg" class="h-400 w-100" alt="...">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -27,36 +27,27 @@
                     </button>
                 </div>
             </div>
-            <div class="col-12 block1-black p-4 g-0">
+            <div class="block1-black p-4 g-0">
                 <h3>Comment Procédons nous?</h3>
                 <p> Tout d'abord nous procédons a une prise de rendez-vous, via un entretien téléphonique avec nôtre client. a l'issus de cette prise de rendez-vous , nous irons visité le bien a rénover. Nous avons également la possibilité de remplire un devis directement sur place , car nôtre site web dispose de cette fonctionalité. Pour terminer , nous fixerons une date de début de Chantier.Pour toutes demande proffessionnel, n'hésitez pas a nous contacter.</p>
             </div>
         </div>
-        <div class="col-6 row flex-column g-0 ">
-            <div class="col-12 block2-black p-4 g-0">
-                <h2 class="fs-60 text-white text-enter mb-5">Notre Histoire</h2>
+        <div class="col-6 row flex-column g-0">
+            <div class="block2-black p-4 g-0">
+                <h2 class="fs-39 text-white cadre-or p-2">BAR TABAC LE BISTRO</h2>
             </div>
-            <div class="col-12 block-or d-flex flex-column justify-content-between p-4 g-0">
+            <div class="block-or d-flex flex-column justify-content-between p-4 g-0">
                 <div>
                     <h3>Qui sommes nous?</h3>
-                    <p>RC Peinture est une entreprise de peinture, qui na qu'un seul objectif en tête satisfaire vos envies. Nous vous proposon , du travail qualitatif d'une grande minutie a des tarrif abordables. Étant passionnée depuis 42 ans, nous avons pris l'initiative de crée cette société afin de donner une nouvelle jeunesses a vos logements.</p>
+                    <p>Soyez les bienvenues au BAR TABAC LE BISTROT à BERRE L'ETANG, Bouches-du-Rhône ! Vous trouverez dans notre bar tabac de nombreux produits, et de nombreux services. Pour voir tous les produits et services de votre tabac, rendez-vous sur la page nos activités. Votre bar tabac est heureux de vous accueillir dans une ambiance conviviale et chaleureuse. N'hésitez pas à venir nous voir ! Notre tabac est ouvert le dimanche.</p>
                 </div>
                 <div class="text-end">
-                    <a class="btn border-1 border-white text-white bg-white-h text-or-h" href="">Contacter</a>
+                    <a class="presentation-but radius-11 text-decoration-none text-uppercase" href="./contact.php">Contacter</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-
-
-
-
-
-
-
-
 
 
 <section class="section-3 la-carte w-85 m-auto section2-bg my-5 py-5">
@@ -106,8 +97,8 @@
             </div>
             <div class="col-lg-6 offset-lg-1 col-md-6 la-carte shadow2 p-4">
                 <div class="mb-2">
-                    <h2 class="afert1 m-0 pb-1">Pizza</h2>
-                    <h2 class="afert2"></h2>
+                    <h2 class="after1 m-0 pb-1">Pizza</h2>
+                    <h2 class="after2"></h2>
                 </div>
                 <div class="row g-0">
                     <div class="col-6 text-start">
@@ -147,8 +138,8 @@
         <div class="row bg-pasta p-5 m-0">
             <div class="col-lg-6 col-md-6 la-carte shadow2 p-4">
                 <div class="mb-2">
-                    <h2 class="afert1 m-0 pb-1">Pasta</h2>
-                    <h2 class="afert2"></h2>
+                    <h2 class="after1 m-0 pb-1">Pasta</h2>
+                    <h2 class="after2"></h2>
                 </div>
                 <div class="row g-0">
                     <div class="col-6 text-start">
@@ -193,8 +184,8 @@
 </section>
 
 <section class="section-5 cadre-or shadow1 p-3 mt-5 w-85 m-auto">
-    <h2 class="w-25 text-center m-auto text-white afert1 pb-2 px-0">Nos Evenements</h2>
-    <h2 class="w-25 m-auto afert2"></h2>
+    <h2 class="w-25 text-center m-auto text-white after1 pb-2 px-0">Nos Evenements</h2>
+    <h2 class="w-25 m-auto after2"></h2>
     <?php $result = get_article($db, 4); ?>
     <div class="container-fluid bg-or my-5">
         <div class="row">
@@ -204,7 +195,7 @@
         </div>
     </div>
     <div class="text-center my-4">
-        <a class="cards-but radius-11 text-decoration-none text-uppercase fs-6 mb-2" href="./evenement.php">Evenement</a>
+        <a class="cards-but radius-11 text-decoration-none text-uppercase mb-2" href="./evenement.php">Evenement</a>
     </div>
 </section>
 

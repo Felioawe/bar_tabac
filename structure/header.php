@@ -16,7 +16,7 @@
     <script defer src="./structure/burger.js"></script>
     <script defer src="./structure/stock.js"></script>
 
-    <title><?= $title ?: "Home"; ?></title>
+    <title><?= $title ?: "HOME"; ?></title>
 
 </head>
 
@@ -47,13 +47,14 @@
                 </div>
             </div>
             <div class="bg-gray d-flex">
-                <div class="w-80 m-auto ms-128 text-center py-2">
-                    <a class="text-decoration-none text-white text-or-h text-uppercase me-5 position-relative" href="./index.php">Home</a>
-                    <a class="text-decoration-none text-white text-or-h text-uppercase mx-5" href="">Services</a>
-                    <a class="text-decoration-none text-white text-or-h text-uppercase ms-5" href="./evenement.php">Evenement</a>
-                    <a class="text-decoration-none text-white text-or-h text-uppercase mx-5" href="./contact.php">Contact</a>
+                <div class="w-25"></div>
+                <div class="w-35 m-auto d-flex justify-content-between py-2">
+                    <a class="text-decoration-none text-white text-or-h text-uppercase position-relative" href="./index.php">Home</a>
+                    <a class="text-decoration-none text-white text-or-h text-uppercase" href="./evenement.php">Evenement</a>
+                    <a class="text-decoration-none text-white text-or-h text-uppercase" href="">Services</a>
+                    <a class="text-decoration-none text-white text-or-h text-uppercase" href="./contact.php">Contact</a>
                 </div>
-                <div class="me-128 align-self-center">
+                <div class="w-25 text-end align-self-center me-5">
                     <?= $butAdmi; ?>
                 </div>
             </div>
@@ -61,6 +62,7 @@
 
         <div class="h-116">
         </div>
+
         <div class="burger">
             <div class="bg-black menuAdmi d-flex flex-column">
                 <div class="text-center mt-3">
@@ -125,49 +127,40 @@
                 </div>
             </div>
         </div>
-        <section class="section1 mb-5">
-            <div class="row w-0 g-0">
-                <div class="col-3 row g-0 d-flex flex-column">
-                    <div class="col-4 img-svf1">
-                        <div class="h-black">
-                            <p>Alcool</p>
+
+        <?php
+        if ($title == "HOME") : ?>
+            <section class="mb-5">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./assets/barista.jpg" class="h-645 w-100" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/istockphoto-688451514-1024x1024.jpg" class="h-645 w-100" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/istockphoto-157435413-1024x1024.jpg" class="h-645 w-100" alt="">
                         </div>
                     </div>
-                    <div class="col-4 img-svf2">
-                        <div class="h-black">
-                            <p>Bière</p>
-                        </div>
-                    </div>
-                    <div class="col-4 img-svf3">
-                        <div class="h-black">
-                            <p>Non-alcool</p>
-                        </div>
-                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
-                <div class="col-9">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="./assets/istockphoto-157435413-1024x1024.jpg" class="h-645 w-100" alt="">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="./assets/istockphoto-688451514-1024x1024.jpg" class="h-645 w-100" alt="">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="./assets/tonneau.jpg" class="h-645 w-100" alt="">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
+            </section>
+
+        <?php else : ?>
+            <section class="bg-bandeau d-flex flex-column align-items-center">
+                <div class="text-white p-5">
+                    <h1 class="after1 position-relative px-0 pb-2 m-0"><?= $title ?></h1>
+                    <h1 class="after2 position-relative px-0"></h1>
                 </div>
-            </div>
-        </section>
+            </section>
+        <?php endif; ?>
     </header>
     <main>
