@@ -36,6 +36,7 @@
                     <i class="fa fa-mobile text-white"></i>
                     <p class="m-0 px-3 text-or"> 06 XX XX XX</p>
                     <i class="fa fa-envelope text-white"></i><a class="m-0 mb-1 text-or px-3 text-decoration-none" href="mailto:contact@pandao.eu"> contact@pandao.eu</a>
+
                     <?php $butAdmi = ''; ?>
                     <?php if (isset($_SESSION['connect']) && !empty($_SESSION['connect'])) : ?>
                         <?php if ($_SESSION['connect'] == 1) : ?>
@@ -128,19 +129,19 @@
             </div>
         </div>
 
-        <?php
-        if ($title == "HOME") : ?>
-            <section class="mb-5">
+        <?php if ($title == "HOME") : ?>
+
+            <section>
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="./assets/barista.jpg" class="h-645 w-100" alt="">
+                            <img src="./assets/barista.jpg" class="h-720 w-100" alt="">
                         </div>
                         <div class="carousel-item">
-                            <img src="./assets/istockphoto-688451514-1024x1024.jpg" class="h-645 w-100" alt="">
+                            <img src="./assets/istockphoto-688451514-1024x1024.jpg" class="h-720 w-100" alt="">
                         </div>
                         <div class="carousel-item">
-                            <img src="./assets/istockphoto-157435413-1024x1024.jpg" class="h-645 w-100" alt="">
+                            <img src="./assets/istockphoto-157435413-1024x1024.jpg" class="h-720 w-100" alt="">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -154,13 +155,33 @@
                 </div>
             </section>
 
-        <?php else : ?>
-            <section class="bg-bandeau d-flex flex-column align-items-center">
-                <div class="text-white p-5">
-                    <h1 class="after1 position-relative px-0 pb-2 m-0"><?= $title ?></h1>
-                    <h1 class="after2 position-relative px-0"></h1>
+        <?php elseif ($title == "ARTICLE") : ?>
+            <?php $id = $_GET['id']; ?>
+            <?php $result = get_article($db, "", $id); ?>
+
+            <section class="bg-bandeau">
+                <img src="./upload/<?= $result['img']; ?>" alt="" style="height: 500px; width:100%;">
+                <div class="bandeau-title">
+                    <div class="header-title">
+                        <h1 class="text-uppercase fs-90 w-50 m-auto"><?= $result['titre'] ?><img class="w-100" style="margin-top: -70px;" src="./assets/after_bar_tabc.png" alt="after"></h1>
+                    </div>
                 </div>
             </section>
+
+        <?php else : ?>
+
+            <section class="bg-bandeau">
+                <img src="./assets/planche.jpg" alt="" style="height: 500px; width:100%;">
+                <div class="bandeau-title">
+                    <div class="header-title">
+                        <h1 class="fs-90 w-50 m-auto"><?= $title ?><img class="w-100" style="margin-top: -70px;" src="./assets/after_bar_tabc.png" alt="after"></h1>
+                    </div>
+                </div>
+            </section>
+
         <?php endif; ?>
+
+        <div class="bandeau-transparent1"></div>
+        <div class="bandeau-transparent2"></div>
     </header>
     <main>

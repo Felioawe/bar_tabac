@@ -30,7 +30,7 @@ if (isset($_GET["id"]) && !empty($_GET["id"])) {
    $w_80_m_auto = "";
 }
 ?>
-<div class="container-compte row <?= $w_80_m_auto ?>">
+<section class="container-compte row <?= $w_80_m_auto ?>">
     <div class="<?= $col1 ?>">
         <?php require_once "./structure/update_user.php"; ?>
     </div>
@@ -71,7 +71,7 @@ if (isset($_GET["id"]) && !empty($_GET["id"])) {
             <?php endforeach; ?>
         </table>
     </div>
-</div>
+</section>
 
 
 

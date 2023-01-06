@@ -2,7 +2,7 @@
 <?php require_once "./structure/header.php"; ?>
 <?php require_once "./requette/config.php"; ?>
 
-<div class="container-fluid">
+<section class="container-fluid">
     <div class="row">
         <div class="col-3 AddStock UpdateStock">
 
@@ -41,7 +41,8 @@
             </table>
         </div>
     </div>
-</div>
+</section>
+
 <div class="col-3 row g-0 d-flex flex-column">
     <div class="col-4 img-svf1">
         <div class="h-black">

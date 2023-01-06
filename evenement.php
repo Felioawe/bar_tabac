@@ -5,8 +5,8 @@ require_once "./requette/config.php";
 require_once "./structure/function.php";
 ?>
 
-<section class="la-carte shadow1 p-3 mt-5 w-85 m-auto">
-    <?php $result = get_article($db, 0); ?>
+<section class="la-carte shadow1 p-3 w-85 m-auto">
+    <?php $result = get_article($db, 0,""); ?>
     <div class="container-fluid bg-or my-5">
         <div class="row">
             <?php foreach ($result as $add) : ?>
@@ -18,7 +18,7 @@ require_once "./structure/function.php";
 
 <?php if (isset($_SESSION['connect']) && !empty($_SESSION['connect'])) : ?>
     <?php if ($_SESSION['connect'] == 1) : ?>
-        <div class="w-50 m-auto">
+        <section class="w-85 m-auto">
             <div class="d-flex flex-column cadre-or text-white p-4 my-5">
                 <form action="./requette/insert_article.php" enctype="multipart/form-data" method="POST">
                     <div class="w-25 m-auto text-center">
@@ -49,7 +49,7 @@ require_once "./structure/function.php";
                     </div>
                 </form>
             </div>
-        </div>
+        </section>
     <?php endif; ?>
 <?php endif; ?>
 <?php require_once "./structure/footer.php";

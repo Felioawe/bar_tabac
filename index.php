@@ -1,7 +1,7 @@
 <?php $title = "HOME"; ?>
 <?php require_once "./structure/header.php"; ?>
 
-<section class="section-1 w-85 m-auto my-5 g-0">
+<section class="w-85 m-auto my-5 g-0">
     <div class="row g-0 cadre-or-2 shadow1">
         <div class="col-6 row flex-column g-0">
             <div class="block1-red g-0">
@@ -50,7 +50,7 @@
 </section>
 
 
-<section class="section-3 la-carte w-85 m-auto section2-bg my-5 py-5">
+<section class="la-carte w-85 m-auto section2-bg my-5 py-5">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
@@ -83,11 +83,7 @@
     </div>
 </section>
 
-
-
-
-
-<section class="section-4 w-85 m-auto shadow1">
+<section class="w-85 m-auto shadow1">
     <div class="container-fluid g-0">
         <div class="row bg-pizza p-5 m-0">
             <div class="col-lg-5 col-md-6 g-0">
@@ -183,10 +179,10 @@
     </div>
 </section>
 
-<section class="section-5 cadre-or shadow1 p-3 mt-5 w-85 m-auto">
+<section class="cadre-or shadow1 p-3 mt-5 w-85 m-auto">
     <h2 class="w-25 text-center m-auto text-white after1 pb-2 px-0">Nos Evenements</h2>
     <h2 class="w-25 m-auto after2"></h2>
-    <?php $result = get_article($db, 4); ?>
+    <?php $result = get_article($db, 4,""); ?>
     <div class="container-fluid bg-or my-5">
         <div class="row">
             <?php foreach ($result as $add) : ?>

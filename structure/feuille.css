@@ -8,7 +8,7 @@
 
 
 * { margin: 0; padding: 0; box-sizing: border-box;}
- body {background: url(../assets/bg\ ampoule.jpg) center/contain fixed!important;}
+ body {background: url(../assets/bg\ ampoule.jpg) center/cover fixed!important;}
 .mt--150 {margin-top: -150px;}
 .mb--145 {margin-bottom: -145px;}
 .me-128 {margin-right: 128px;}
@@ -31,12 +31,13 @@
 .h-150 {height: 150px;}
 .h-200 {height: 200px;}
 .h-250 {height: 250px;}
-.h-645 {height: 645px;}
 .h-300 {height: 300px;}
 .h-400 {height: 400px;}
 .h-500 {height: 500px;}
 .h-540 {height: 540px;}
 .h-600 {height: 600px;}
+.h-720 {height: 720px;}
+.fs-90 {font-size: 90px !important;}
 .fs-39 {font-size: 39px;}
 .logo-profil {height: 100px; width:100px;} 
 .logo {height: 60px; width:150px;}
@@ -64,7 +65,7 @@
 
 h1, h2, h3, h4 {
     font-family: fantasy !important; 
-    text-shadow: 3px 3px 0 rgb(0 0 0 / 15%);
+    text-shadow: 5px 5px 0 rgb(0 0 0 / 50%);
 }
 
 h2 {position: relative;}
@@ -94,8 +95,11 @@ h2 {position: relative;}
 .menu-secondaire-1 ~ .sous-menu-1, .menu-secondaire-2 ~ .sous-menu-2, .menu-secondaire-3 ~ .sous-menu-3, .menu-secondaire-4 ~ .sous-menu-4, .menu-secondaire-5 ~ .sous-menu-5, .menu-secondaire-6 ~ .sous-menu-6 {max-height: 0; overflow-y: hidden; display: flex; flex-direction: column; transition: all 0.8s;}
 .container-menu-secondaire-1:hover .sous-menu-1, .container-menu-secondaire-2:hover .sous-menu-2, .container-menu-secondaire-3:hover .sous-menu-3, .container-menu-secondaire-4:hover .sous-menu-4, .container-menu-secondaire-5:hover .sous-menu-5, .container-menu-secondaire-6:hover .sous-menu-6 {max-height: 200px; transition: all 1.5s ease-in-out;}
 
-.bg-bandeau {background: url(../assets/table_noir.png) center/cover; min-height: 200px; width: 100%;}
- 
+.bg-bandeau {position: relative;}
+.bandeau-title {position: absolute; top: 0%; right: 0%; height: 100%; width: 100%; display: flex; justify-content: center; align-items: center; text-align: center;}
+.header-title {color: #fff;}
+.bandeau-transparent1 {background: rgb(0,0,0); background: linear-gradient(180deg, transparent -5%, rgba(0,0,0,1) 80%); height: 150px; position: relative; margin-top: -180px;}
+.bandeau-transparent2 {background: rgb(0,0,0); background: linear-gradient(0deg, transparent -5%, rgba(0,0,0,1) 80%); height: 150px; position: relative;}
 
 @keyframes rotating {
 
@@ -139,12 +143,6 @@ h2 {position: relative;}
 /* *************************************************************** compte *************************************************************** */
 .container-compte {padding: 0 12px;}
 
-
-
-
-
-
-
 .icon{
     background: rgb(253, 183, 1);
     border: 3px solid rgb(253, 183, 1);
@@ -177,8 +175,16 @@ h2 {position: relative;}
 
 .cards-text {padding: 10px 10px; background: #000; color: #c5a154;}
 .cards-titre {text-transform: uppercase;}
-.cards-mes{padding: 10px 10px; background: #1c1c1c; color: #fff; border: 1px solid #585858; height: 90px; overflow: hidden;}
+.cards-mes{padding: 10px 10px; background: #1c1c1c; color: #fff; border: 1px solid #585858; height: 85px; overflow: hidden;}
 .cards-date{font-weight: bolder;}
+
+.article-titre {text-transform: uppercase;}
+.article-mes{padding: 10px 10px; background: #1c1c1c; color: #fff; border: 1px solid #585858; max-height: 200px; text-align: start; overflow-y: hidden;}
+.article-mes:hover{overflow-y: scroll;}
+.article-date{font-weight: bolder;}
+
+.test1 {position: relative;}
+.test2 {position: absolute; top: 0%; right: 0%; height: 100%; width: 100%;}
 
 .contact-but, .cards-but, .presentation-but {background: #000; color: #c5a154; border: 2px solid #c5a154; padding: 8px 6px; transition: 0.5s;}
 .contact-but:hover, .cards-but:hover, .presentation-but:hover {background: #c5a154; color: #fff; transition: 0.5s; }

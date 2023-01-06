@@ -1,13 +1,25 @@
 <?php 
 
 
-function get_article($db,$nb) {
-    if ($nb > 0) {
+function get_article($db,$nb,$id) {
+    if ($nb > 0 && $id == "") {
         $sql = "SELECT blog.id_blog, blog.titre, blog.img, user.img_user, user.user, blog.mes, blog.date FROM user INNER JOIN blog ON user.id_user = blog.id_user LIMIT $nb";
         
         $req = $db->prepare($sql);
         
         $req->execute(); 
+
+        return  $req->fetchAll();
+    } 
+
+    elseif ($id !== "" && $nb == "") {
+        $sql = "SELECT blog.id_blog, blog.titre, blog.img, user.img_user, user.user, blog.mes, blog.date FROM user INNER JOIN blog ON user.id_user = blog.id_user WHERE id_blog = :id";
+        
+        $req = $db->prepare($sql);
+        
+        $req->execute([':id' => $id]); 
+       
+        return  $req->fetch(PDO::FETCH_ASSOC);
     } 
     
     else {
@@ -17,18 +29,20 @@ function get_article($db,$nb) {
         $req = $db->prepare($sql);
         
         $req->execute();
+        
+        return  $req->fetchAll();
     }
-    return  $req->fetchAll();
+    
 }
 
 
 
 function article($add) {
-    return '<div class="col-12 col-lg-3 p-3">
+    return '<div class="col-12 col-md-6 col-lg-4 col-xl-3 p-3">
                 <div class="cards">
                     <div class="cards-img">
                         <img class="w-100 h-250" src="./upload/'.$add['img'].'" alt="">
-                        <a href="#" class="cards-h">
+                        <a href="./article.php?id='.$add['id_blog'].'" class="cards-h">
                              <h4>'.$add['titre'].'</h4>
                         </a>
                     </div>
