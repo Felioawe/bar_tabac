@@ -1,0 +1,17 @@
+<div class="col-3 row g-0 d-flex flex-column">
+    <div class="col-4 img-svf1">
+        <div class="h-black">
+            <p>Alcool</p>
+        </div>
+    </div>
+    <div class="col-4 img-svf2">
+        <div class="h-black">
+            <p>Bière</p>
+        </div>
+    </div>
+    <div class="col-4 img-svf3">
+        <div class="h-black">
+            <p>Non-alcool</p>
+        </div>
+    </div>
+</div>

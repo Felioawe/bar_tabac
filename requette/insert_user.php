@@ -64,12 +64,14 @@ echo'test';
     // sois en affectant mes prametre avant avec bindParam ou bindValue
     // $req->execute();
     if ($req) {
-         echo 'requette envoyer';
-        header("location: ../index.php");
+        
+        echo 'requette envoyer';
+        header("location: ../compte.php?success=1");
     }
     else {
-        header("location: ../index.php?erreur=0");
+        
         echo "erreur d'envoie";
+        header("location: ../compte.php?erreur=0");
     }
 }
 

@@ -2,15 +2,14 @@
 require_once "./config.php";
 
 var_dump($_POST);
-var_dump($_GET['id']);
 var_dump($_FILES);
 
 
 
-if (isset($_GET['id']) && isset($_POST['name']) && isset($_POST['user']) && isset($_POST['tel']) && isset($_POST['email']) && isset($_POST['mdp']) 
-&& !empty($_GET['id']) && !empty($_POST['name']) && !empty($_POST['user']) && !empty($_POST['tel']) && !empty($_POST['email']) && !empty($_POST['mdp'])) {
-        
-    $id = $_GET['id'];
+if (isset($_POST['id-user']) && isset($_POST['name']) && isset($_POST['user']) && isset($_POST['tel']) && isset($_POST['email']) && isset($_POST['mdp']) 
+&& !empty($_POST['id-user']) && !empty($_POST['name']) && !empty($_POST['user']) && !empty($_POST['tel']) && !empty($_POST['email']) && !empty($_POST['mdp'])) {
+        echo 'te';
+    $id = $_POST['id-user'];
     $name = $_POST['name']; 
     $user = $_POST['user']; 
     $tel = $_POST['tel']; 
@@ -51,7 +50,7 @@ if (isset($_GET['id']) && isset($_POST['name']) && isset($_POST['user']) && isse
         ]);
 
     if ($req) {
-         echo 'requette envoyer';
+        echo 'requette envoyer';
         header("location: ../compte.php");
     }
     else {

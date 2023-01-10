@@ -182,7 +182,7 @@
 <section class="cadre-or shadow1 p-3 mt-5 w-85 m-auto">
     <h2 class="w-25 text-center m-auto text-white after1 pb-2 px-0">Nos Evenements</h2>
     <h2 class="w-25 m-auto after2"></h2>
-    <?php $result = get_article($db, 4,""); ?>
+    <?php $result = get_article($db, 4); ?>
     <div class="container-fluid bg-or my-5">
         <div class="row">
             <?php foreach ($result as $add) : ?>

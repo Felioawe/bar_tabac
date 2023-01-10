@@ -36,8 +36,17 @@ document.querySelectorAll('.js-modal').forEach(a => {
   a.addEventListener('click', openModal);
 })
 
+
 window.addEventListener('keydown', function (e) {
   if (e.key === 'Escape' || e.key === 'Esc') {
     closeModal(e);
   }
 })
+
+
+
+// const searchParams = new URLSearchParams(window.location.search);
+
+// const paramValue = searchParams.get("mod1");
+ 
+// console.log(paramValue);

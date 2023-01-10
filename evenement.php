@@ -6,7 +6,7 @@ require_once "./structure/function.php";
 ?>
 
 <section class="la-carte shadow1 p-3 w-85 m-auto">
-    <?php $result = get_article($db, 0,""); ?>
+    <?php $result = get_article($db, 0); ?>
     <div class="container-fluid bg-or my-5">
         <div class="row">
             <?php foreach ($result as $add) : ?>

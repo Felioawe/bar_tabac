@@ -32,9 +32,9 @@ if (isset($_POST['user']) && isset($_POST['mdp'])
         }
         
         else {
-            header('location: ../index.php?erreur= 0');
+            header('location: ../index.php');
         }
-    }
+    }header('location: ../index.php?mod1=1');
 
 }
 else {

@@ -3,7 +3,4 @@
 <?php require_once "./requette/config.php";?>
 
 
-
-
-
 <?php require_once "./structure/footer.php";?>

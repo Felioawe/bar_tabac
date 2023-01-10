@@ -12,11 +12,8 @@
                     <label for="mdp">Password</label><br>
                     <input class="bg-gray text-white w-100" type="text" name="mdp" id="mdp">
                 </div>
-                <div class="mt-5">
-                    <input class=" butConnect rounded-2 w-100" type="submit" value="Connect">
-                </div>
-                <div class="text-center mt-4">
-                    <a class="js-modal" href="#mod2">Inscription</a>
+                <div class="mt-5 text-center">
+                    <input class=" butConnect rounded-2 w-25" type="submit" value="Connect">
                 </div>
             </div>
         </form>

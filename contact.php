@@ -31,33 +31,35 @@
                 </div>
             </div>
             <div class="col-12 col-lg-8 px-3 mt-5">
-                <form action="" method="$_POST">
+                <form id="form" action="./requette/insert_contact.php" method="post">
                     <div class="row">
                         <div class="col-12 col-sm-7 position-relative">
-                            <input class=" w-100 mb-3 bg-secondary p-2 text-white bg-opacity-25 border-0" type="text" id="name" name="user_name" placeholder="Votre nom">
+                            <input class="input-contact w-100 mb-3 bg-secondary p-2 text-white bg-opacity-25" type="text" id="name" name="name" placeholder="Votre nom">
                         </div>
                         <div class="col-12 col-sm-5 position-relative">
-                            <input class="w-100 mb-3 bg-secondary p-2 text-white bg-opacity-25 border-0" type="text" id="first_name" name="first_name" placeholder="Votre prénom">
-
+                            <input class="input-contact w-100 mb-3 bg-secondary p-2 text-white bg-opacity-25" type="text" id="first_name" name="first_name" placeholder="Votre prénom">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12 col-sm-5 position-relative">
-                            <input class="w-100 mb-3 bg-secondary p-2 text-white bg-opacity-25 border-0" type="text" id="telephone" name="user_telephone" placeholder="Votre telephone">
+                            <input class="input-contact w-100 mb-3 bg-secondary p-2 text-white bg-opacity-25" type="text" id="tel" name="tel" placeholder="Votre telephone">
 
                         </div>
                         <div class="col-12 col-sm-7 position-relative">
-                            <input class="w-100 mb-3 bg-secondary p-2 text-white bg-opacity-25 border-0" type="email" id="email" name="user_email" placeholder="Votre email">
+                            <input class="input-contact w-100 mb-3 bg-secondary p-2 text-white bg-opacity-25" type="email" id="email" name="email" placeholder="Votre email">
                         </div>
                         <div class="col-12 position-relative">
-                            <input class="w-100 mb-3 p-1 bg-secondary p-2 text-white bg-opacity-25 border-0" type="text" id="sujet" name="user_sujet" placeholder="Sujet">
+                            <input class="input-contact w-100 mb-3 p-1 bg-secondary p-2 text-white bg-opacity-25" type="text" id="sujet" name="sujet" placeholder="Sujet">
                         </div>
                         <div class="col-12 position-relative">
-                            <textarea class="w-100 mb-4 p-1 bg-secondary p-2 text-white bg-opacity-25 border-0" id="msg" name="user_message" rows="10" placeholder="Votre message" style="resize: none;"></textarea>
+                            <textarea class="input-contact w-100 mb-4 p-1 bg-secondary p-2 text-white bg-opacity-25" id="msg" name="msg" rows="10" placeholder="Votre message" style="resize: none;"></textarea>
                         </div>
+                    </div>
+                    <div class="icon2 position-relative py-5">
+
                     </div>
                     <div>
-                        <button type="submit" class="contact-but text-uppercase py-1 px-3">envoyer</button>
+                        <input type="submit" class="contact-but text-uppercase py-1 place px-3">
                     </div>
                 </form>
             </div>
