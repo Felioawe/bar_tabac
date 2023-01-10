@@ -27,7 +27,6 @@
     <?php require_once "./structure/function.php"; ?>
     <?php require_once "./requette/config.php"; ?>
     <?php require_once "modal_user.php"; ?>
-    <?php require_once "modal_inscription.php"; ?>
     <header>
         <nav class="menu">
             <div class="navbar d-flex  m-auto w-85">

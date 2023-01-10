@@ -78,6 +78,7 @@ function article($add) {
                        <h5 class="cards-titre">'.$add['titre'].'</h5>
                         <p class="cards-mes">'.$add['mes'].'</p>
                         <p class="cards-date">'.$add['date'].'</p>
+                        <a class="butDelete px-2 py-1" href="./requette/delete_user.php?id='.$add['id_blog'].'">Supprimer</a>
                     </div>
                 </div>
             </div>';

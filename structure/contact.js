@@ -1,6 +1,11 @@
+const inputs = $("input").not("#user").not("#mdp").not("input[type=submit]").not("#img").not("#admi");
+const textarea = $('textarea');
+const nb_champ = inputs.length + textarea.length ;
+console.log(nb_champ);
+console.log(textarea);
+console.log(inputs);
 const contactRegex = (target, regex) => {
     // let icon = target.nextElementSibling
-    
     if($(target).val().match(regex) && $(target).val() != ''){
 
         $(target).addClass('form-regex-green'); 
@@ -33,7 +38,7 @@ $('.input-contact').on('input',Check_conctactRegex);
 
 $('#form').on('submit', (e) =>{
 
-    if($('.form-regex-green').length != inputs.length){
+    if($('.form-regex-green').length != nb_champ){
         
         e.preventDefault();
     }
