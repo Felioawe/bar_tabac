@@ -75,10 +75,12 @@ function article($add) {
                         </a>
                     </div>
                     <div class="cards-text">
-                       <h5 class="cards-titre">'.$add['titre'].'</h5>
+                        <h5 class="cards-titre">'.$add['titre'].'</h5>
                         <p class="cards-mes">'.$add['mes'].'</p>
-                        <p class="cards-date">'.$add['date'].'</p>
-                        <a class="butDelete px-2 py-1" href="./requette/delete_user.php?id='.$add['id_blog'].'">Supprimer</a>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <p class="cards-date">'.$add['date'].'</p>
+                            <a class="butDelete" href="./requette/delete_article.php?id='.$add['id_blog'].'">Supprimer</a>
+                        </div>
                     </div>
                 </div>
             </div>';

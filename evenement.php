@@ -17,7 +17,7 @@ require_once "./structure/function.php";
 </section>
 
 <?php if (isset($_SESSION['connect']) && !empty($_SESSION['connect'])) : ?>
-    <?php if ($_SESSION['connect'] == 1) : ?>
+    <?php if ($_SESSION['connect'] == 1 && $_SESSION['status'] == 'admi') : ?>
         <section class="w-85 m-auto">
             <div class="d-flex flex-column cadre-or text-white p-4 my-5">
                 <form action="./requette/insert_article.php" enctype="multipart/form-data" method="POST">

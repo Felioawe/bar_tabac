@@ -1,9 +1,7 @@
 const inputs = $("input").not("#user").not("#mdp").not("input[type=submit]").not("#img").not("#admi");
 const textarea = $('textarea');
 const nb_champ = inputs.length + textarea.length ;
-console.log(nb_champ);
-console.log(textarea);
-console.log(inputs);
+
 const contactRegex = (target, regex) => {
     // let icon = target.nextElementSibling
     if($(target).val().match(regex) && $(target).val() != ''){

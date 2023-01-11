@@ -12,7 +12,8 @@
                     <p class="article-mes mx-4 my-4"><?= $result['mes'] ?></p>
                     <p class="article-date px-5"><?= $result['date'] ?></p>
                 </div>
-                <div class="text-end my-4">
+                <div class="d-flex justify-content-between align-items-center my-4">
+                    <a class="butDelete ms-3 py-2 px-3" href="requette/delete_article.php?id= <?= $result['id_blog'] ?>">Supprimer</a>
                     <a class="cards-but radius-11 text-decoration-none text-uppercase mb-2 me-3" href="./contact.php">contacter</a>
                 </div>
             </div>

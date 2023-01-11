@@ -39,11 +39,11 @@ $results = $req->fetchAll(PDO::FETCH_ASSOC);
                 <?php foreach ($results as $user) : ?>
                     <tbody>
                         <tr>
-                            <td class="fw-bold text-red py-3 px-0"><?= $user['id_user']; ?></td>
-                            <td class="text-muted py-3 px-0"><?= $user['name']; ?></td>
-                            <td class="text-muted py-3 px-0"><?= $user['user']; ?></td>
-                            <td class="text-muted py-3 px-0"><?= $user['tel']; ?></td>
-                            <td class="text-muted py-3 px-0"><?= $user['email']; ?></td>
+                            <td data-target="id-user" class="fw-bold text-red py-3 px-0"><?= $user['id_user']; ?></td>
+                            <td data-target="name" class="text-muted py-3 px-0"><?= $user['name']; ?></td>
+                            <td data-target="user" class="text-muted py-3 px-0"><?= $user['user']; ?></td>
+                            <td data-target="tel" class="text-muted py-3 px-0"><?= $user['tel']; ?></td>
+                            <td data-target="email" class="text-muted py-3 px-0"><?= $user['email']; ?></td>
                             <td class="text-muted text-uppercase py-3 px-0"><?= $user['status']; ?></td>
                             <td class="text-muted py-3 px-2"><button class="ButUpdateLogin butUpdate px-2 py-1">Modifier</button></td>
                             <td class="text-muted py-3 px-2"><a class="butDelete px-2 py-1" href="./requette/delete_user.php?id=<?= $user['id_user']; ?>">Supprimer</a></td>
@@ -59,8 +59,7 @@ $results = $req->fetchAll(PDO::FETCH_ASSOC);
             <div class="text-white text-uppercase w-100 px-5 py-3">
                 <h2 class="text-center border-b-or pb-2">Modifier</h2>
                 <div>
-                    <label for="name"><span class="text-red">ID</span> User :</label><br>
-                    <input class="bg-gray text-red w-100" type="text" name="id-user" id="id-user" placeholder="Enter ID user" value="<?= $user['id_user'] ?>">
+                    <input type="hidden" name="id-user" id="id-user">
                 </div>
                 <div>
                     <label for="name">Non :</label><br>

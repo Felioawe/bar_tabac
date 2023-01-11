@@ -1,4 +1,14 @@
-
+console.log('test');
+$(".butUpdate").each(function () {
+    $(this).on("click", function () {
+        var tdValues = $(this).closest("tr").find("td");       
+        tdValues.each(function () {
+            let targetId = $(this).data("target");
+            console.log(targetId);
+             $("input#" + targetId).val($(this).html());
+        })
+    })
+});
 
 
 function openAddLogin() {
@@ -66,4 +76,4 @@ function openUpadateLogin() {
     });
 }
 
-openUpadateLogin()
+openUpadateLogin();
