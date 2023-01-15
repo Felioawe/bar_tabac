@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-4 col-md-3 col-lg-2">
-                    <h4 class="text-or">Le Bistro</h4>
+                    <h4 class="text-or">Le Bistrot</h4>
                     <div>
                         <p class="m-0">Adresse :</p>
                         <p class="m-0"><i class="fa fa-map-marker"></i> Berre L'Etang</p>

@@ -33,7 +33,7 @@
         <nav class="menu">
             <div class="navbar d-flex  m-auto w-85">
                 <div>
-                    <img class="logo" src="./assets/logo_bar_tabc_2.png" alt="logo_loup">
+                    <img class="logo" src="./assets/logo_Le_Bistrot.png" alt="logo_Le_Bistrot">
                 </div>
                 <div class="navbar">
                     <i class="fa fa-mobile text-white"></i>

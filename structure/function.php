@@ -12,7 +12,7 @@
 function get_article(PDO $db, $nb, $id = "") {
 
     if ($nb > 0 && $id == "") {
-        $sql = "SELECT blog.id_blog, blog.titre, blog.img, user.img_user, user.user, blog.mes, blog.date FROM user INNER JOIN blog ON user.id_user = blog.id_user LIMIT $nb";
+        $sql = "SELECT blog.id_blog, blog.titre, blog.img, user.img_user, user.user, blog.mes, blog.date FROM user INNER JOIN blog ON user.id_user = blog.id_user ORDER BY date DESC LIMIT $nb";
         
         $req = $db->prepare($sql);
         
@@ -33,7 +33,7 @@ function get_article(PDO $db, $nb, $id = "") {
     
     else {
     
-        $sql = "SELECT blog.id_blog, blog.titre, blog.img, user.img_user, user.user, blog.mes, blog.date FROM user INNER JOIN blog ON user.id_user = blog.id_user";
+        $sql = "SELECT blog.id_blog, blog.titre, blog.img, user.img_user, user.user, blog.mes, blog.date FROM user INNER JOIN blog ON user.id_user = blog.id_user ORDER BY date DESC";
         
         $req = $db->prepare($sql);
         

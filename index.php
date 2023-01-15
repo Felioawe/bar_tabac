@@ -34,7 +34,7 @@
         </div>
         <div class="col-6 row flex-column g-0">
             <div class="block2-black p-4 g-0">
-                <h2 class="fs-39 text-white cadre-or p-2">BAR TABAC LE BISTRO</h2>
+                <h2 class="fs-39 text-white cadre-or p-2">BAR TABAC LE BISTROT</h2>
             </div>
             <div class="block-or d-flex flex-column justify-content-between p-4 g-0">
                 <div>

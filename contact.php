@@ -6,7 +6,7 @@
 
 <section class="la-carte w-75 m-auto my-5 p-5">
     <div class="bg-black text-white text-center pb-5">
-        <img class="logo" src="./assets/logo_bar_tabc_2.png" alt="logo_loup">
+        <img class="logo" src="./assets/logo_le_bistrot.png" alt="logo_loup">
     </div>
     <div class="container-fluid g-0">
         <div class="row g-0 text-white g-0">
