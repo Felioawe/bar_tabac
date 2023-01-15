@@ -28,17 +28,20 @@ if (isset($_POST['user']) && isset($_POST['mdp'])
             $_SESSION['status'] = $result['status'];
             $_SESSION['connect'] = 1;
 
-            header('location: ../index.php');
+            header('location: ../index.php?mod=2&success=1');
         }
         
         else {
-            header('location: ../index.php');
+            header('location: ../index.php?mod=1&erreur=1');
         }
-    }header('location: ../index.php?mod1=1');
+    }
+    else {
+        header('location: ../index.php?mod=1&erreur=1');
+    }
 
 }
 else {
-    header('location: ../index.php');
+    header('location: ../index.php?mod=1&erreur=2');
 }
 
 

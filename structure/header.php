@@ -27,6 +27,8 @@
     <?php require_once "./structure/function.php"; ?>
     <?php require_once "./requette/config.php"; ?>
     <?php require_once "modal_user.php"; ?>
+    <?php require_once "modal_success_ou_erreur.php"; ?>
+    <a class="d-none js-modal" href="#mod2"></a>
     <header>
         <nav class="menu">
             <div class="navbar d-flex  m-auto w-85">
@@ -42,6 +44,7 @@
                     <?php if (isset($_SESSION['connect']) && !empty($_SESSION['connect'])) : ?>
                         <?php if ($_SESSION['connect'] == 1) : ?>
                             <?php $butAdmi = '<button class="butBurger p-3"></button>'; ?>
+                        <?php else : ?>
                         <?php endif; ?>
                     <?php else : ?>
                         <?php $butAdmi = '<a class="text-decoration-none text-white text-or-h text-uppercase fs-6 js-modal" href="#mod1">login</a>'; ?>
@@ -67,9 +70,15 @@
 
         <div class="burger">
             <div class="bg-black menuAdmi d-flex flex-column">
+            <?php if (isset( $_SESSION['img_user']) && !empty($_SESSION['img_user'])) : ?>
                 <div class="text-center mt-3">
                     <img class="logo-profil radius-100" src="img_profil/<?= $_SESSION['img_user']; ?>">
                 </div>
+            <?php else : ?>
+                <div class="text-center mt-3">
+                    <img class="logo-profil radius-100" src="./img_profil/profil.png">
+                </div>
+            <?php endif; ?>
                 <div class="text-center my-3">
                     <a class="text-decoration-none text-white text-uppercase" href="./profil.php"><?= $_SESSION['user']; ?></a>
                 </div>

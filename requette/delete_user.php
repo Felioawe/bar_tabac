@@ -12,9 +12,12 @@
     $req->execute([":id" => $id]);
 
     if ($req) {
-        header("location: ../compte.php?succes= 1" );
+        header("location: ../compte.php?mod=2&success=4" );
     }
-    else {
-        header("location: ../compte.php?erreur= 0" );
+    elseif ($req == false) {
+        header("location: ../compte.php?mod=2&erreur=3" );
     }
+}
+else {
+    header("location: ../compte.php?mod=2&erreur=3" );
 }

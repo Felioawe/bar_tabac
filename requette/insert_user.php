@@ -35,45 +35,68 @@ echo'test';
 
     // je prends ma clé et je vais la hashé grâce à la function ou methode passord_hash 
     $hash = password_hash($mdp, PASSWORD_DEFAULT);
-    
-    // je définie mon langage sql et je le prepare en inserant des parametre :nom du parametre  et ? et je la stock dans une variable 
-    // $sql = "INSERT INTO blog (user, mdp) VALUES (':user', '?')";
-    $sql = "INSERT INTO user (img_user, name, user, tel, email, mdp, status) VALUES (:img, :name, :user, :tel, :email, :mdp, :status)";
 
-    $req = $db->prepare($sql);
+    $sql1 = "SELECT * FROM user WHERE user = :user";
 
-    // le bindParam ou bindValue fonctionne seulement avec une requette preparer
-    // grace à bindParam jaffecter ma variable a mon parametre (:user)
-    // $req->bindParam(':user', $user/*, declare sont type (integer, string ...ect)*/);
+    $req1 = $db->prepare($sql1);
 
-    // grâce à bindParam j'affecter ma variable et mon parametre index 2 (?)
-    // $req->bindParam(2, $hash/*, declare sont type (integer, string ...ect)*/);
-    
-    // j'execute ma requette de 2 manière :
-    // sois en affectant directemen mes prametre dans mon execute
-    // $req->execute([':user' => $user, 2 => $hash]);
-    $req->execute([
-        ':img' => $img,
-        ':name' => $name,
-        ':user' => $user,
-        ':tel' => $tel,
-        ':email' => $email,
-        ':mdp' => $hash,
-        ':status' => $status
-        ]);
-    // sois en affectant mes prametre avant avec bindParam ou bindValue
-    // $req->execute();
-    if ($req) {
-        
-        echo 'requette envoyer';
-        header("location: ../compte.php?success=1");
+    $req1->execute([':user' => $user]);
+
+    $count_user = $req1->rowCount();
+    var_dump( $count_user);
+
+    if ($count_user >= 1) {
+
+        header("location: ../compte.php?mod=2&erreur=1");
     }
+    
     else {
         
-        echo "erreur d'envoie";
-        header("location: ../compte.php?erreur=0");
+        // je définie mon langage sql et je le prepare en inserant des parametre :nom du parametre  et ? et je la stock dans une variable 
+        // $sql = "INSERT INTO blog (user, mdp) VALUES (':user', '?')";
+        
+        $sql2 = "INSERT INTO user (img_user, name, user, tel, email, mdp, status) VALUES (:img, :name, :user, :tel, :email, :mdp, :status)";
+        
+        $req2 = $db->prepare($sql2);
+        
+        // le bindParam ou bindValue fonctionne seulement avec une requette preparer
+        // grace à bindParam jaffecter ma variable a mon parametre (:user)
+        // $req->bindParam(':user', $user/*, declare sont type (integer, string ...ect)*/);
+    
+        // grâce à bindParam j'affecter ma variable et mon parametre index 2 (?)
+        // $req->bindParam(2, $hash/*, declare sont type (integer, string ...ect)*/);
+
+        $req2->execute([
+            ':img' => $img,
+            ':name' => $name,
+            ':user' => $user,
+            ':tel' => $tel,
+            ':email' => $email,
+            ':mdp' => $hash,
+            ':status' => $status
+            ]);
+
+        // j'execute ma requette de 2 manière :
+        // sois en affectant directemen mes prametre dans mon execute
+        // $req->execute([':user' => $user, 2 => $hash]);
+        // sois en affectant mes prametre avant avec bindParam ou bindValue
+        // $req->execute();
+
+        if ($req2) {
+            
+            echo 'requette envoyer';
+            header("location: ../compte.php?mod=2&success=2");
+        }
+        else {
+            
+            echo "erreur d'envoie";
+            header("location: ../compte.php?mod=2&erreur=2");
+        }
     }
+
 }
-
-
-?>
+else {
+            
+    echo "erreur d'envoie";
+    header("location: ../compte.php");
+}

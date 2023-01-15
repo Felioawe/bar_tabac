@@ -1,4 +1,4 @@
-let modal = null
+let modal = null;
 const openModal = function (e) {
   e.preventDefault();
   modal = document.querySelector(e.target.getAttribute('href'));
@@ -9,11 +9,12 @@ const openModal = function (e) {
   modal.querySelector('.js-modal-close').addEventListener('click', closeModal);
   modal.querySelector('.js-stop').addEventListener('click', stop);
 }
+
 const closeModal = function (e) {
   if (modal === null) return
   e.preventDefault();
   modal.style.display = 'none';
-  modal.offsetWidth
+  modal.offsetWidth;
   modal.style.display = null;
   modal.setAttribute('aria-hidden', 'true');
   modal.removeAttribute('aria-modal');
@@ -34,19 +35,32 @@ const stop = function (e) {
 
 document.querySelectorAll('.js-modal').forEach(a => {
   a.addEventListener('click', openModal);
-})
-
+});
 
 window.addEventListener('keydown', function (e) {
   if (e.key === 'Escape' || e.key === 'Esc') {
     closeModal(e);
   }
-})
+});
 
+const searchParams = new URLSearchParams(window.location.search);
+const paramValue = searchParams.get("mod");
 
+if (paramValue == 1) {
+  const element = document.querySelector(`[href='#mod1']`);
 
-// const searchParams = new URLSearchParams(window.location.search);
-
-// const paramValue = searchParams.get("mod1");
- 
-// console.log(paramValue);
+  if(element) {
+    const event = new Event('click');
+    event.target = element;
+    element.dispatchEvent(event);
+  }
+}
+else if (paramValue == 2) {
+  const element = document.querySelector(`[href='#mod2']`);
+  
+  if(element) {
+    const event = new Event('click');
+    event.target = element;
+    element.dispatchEvent(event);
+  }
+} 

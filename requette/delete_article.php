@@ -12,9 +12,9 @@
     $req->execute([":id" => $id]);
 
     if ($req) {
-        header("location: ../evenement.php?succes= 1" );
+        header("location: ../evenement.php?succes=1" );
     }
     else {
-        header("location: ../evenement.php?erreur= 0" );
+        header("location: ../evenement.php?erreur=0" );
     }
 }
