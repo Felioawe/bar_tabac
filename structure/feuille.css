@@ -214,7 +214,7 @@ input:focus-visible, textarea:focus-visible {outline: none !important;}
 
 
 
-.UpdateLogin, .UpdateStock {
+.UpdateLogin, .UpdateStock,.AddStock {
     display: none ;
 }
 

@@ -26,28 +26,28 @@ $results = $req->fetchAll(PDO::FETCH_ASSOC);
             <table class="cadre-or text-center w-100">
                 <thead class="cadre-or">
                     <tr class="bg-muted text-uppercase">
-                        <th class="text-red p-1" scope="col">id</th>
-                        <th class="text-or p-1" scope="col">Nom</th>
-                        <th class="text-or p-1" scope="col">user</th>
-                        <th class="text-or p-1" scope="col">telephone</th>
-                        <th class="text-or p-1" scope="col">email</th>
-                        <th class="text-or p-1" scope="col">Status</th>
+                        <th class="text-red ps-2 py-2" scope="col">id</th>
+                        <th class="text-or ps-2 py-2" scope="col">Nom</th>
+                        <th class="text-or ps-2 py-2" scope="col">user</th>
+                        <th class="text-or ps-2 py-2" scope="col">telephone</th>
+                        <th class="text-or ps-2 py-2" scope="col">email</th>
+                        <th class="text-or ps-2 py-2" scope="col">Status</th>
                         <?php if ($_SESSION['connect'] == 1 && $_SESSION['status'] == 'admi' ) : ?>
-                            <th class="text-capitalize p-3" scope="col"><button class="ButAddLogin butAdd ps-2 py-1">inscription</button></th>    
+                            <th class="text-capitalize ps-2" scope="col"><button class="ButAddLogin butAdd my-2">inscription</button></th>    
                         <?php endif; ?>
                     </tr>
                 </thead>
                 <?php foreach ($results as $user) : ?>
                     <tbody>
                         <tr>
-                            <td data-target="id-user" class="fw-bold text-red"><?= $user['id_user']; ?></td>
-                            <td data-target="Update_name" class="text-muted"><?= $user['name']; ?></td>
-                            <td data-target="Update_user" class="text-muted"><?= $user['user']; ?></td>
-                            <td data-target="Update_tel" class="text-muted"><?= $user['tel']; ?></td>
-                            <td data-target="Update_email" class="text-muted"><?= $user['email']; ?></td>
-                            <td class="text-muted text-uppercase py-3 px-0"><?= $user['status']; ?></td>
+                            <td data-target="id-user" class="fw-bold text-red text-capitalize ps-2"><?= $user['id_user']; ?></td>
+                            <td data-target="Update_name" class="text-muted text-capitalize ps-2 py-2"><?= $user['name']; ?></td>
+                            <td data-target="Update_user" class="text-muted text-capitalize ps-2 py-2"><?= $user['user']; ?></td>
+                            <td data-target="Update_tel" class="text-muted text-capitalize ps-2 py-2"><?= $user['tel']; ?></td>
+                            <td data-target="Update_email" class="text-muted text-capitalize ps-2 py-2"><?= $user['email']; ?></td>
+                            <td class="text-muted text-uppercase pe-2 py-2"><?= $user['status']; ?></td>
                             <?php if ($_SESSION['connect'] == 1 && $_SESSION['status'] == 'admi' ) : ?>
-                                <td class="text-muted"><button class="ButUpdateLogin butUpdate ps-2 py-1">Modifier</button></td>
+                                <td class="text-muted"><button class="ButUpdateLogin butUpdate ps-2 my-2 text-capitalize">Modifier</button></td>
                                 <td class="text-muted"><a class="butDelete ps-2 py-1" href="./requette/delete_user.php?id=<?= $user['id_user']; ?>">Supprimer</a></td>
                             <?php endif; ?>
                         </tr>

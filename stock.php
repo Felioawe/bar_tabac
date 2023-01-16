@@ -4,19 +4,80 @@
 <?php
 
 
-$sql = "SELECT * FROM user";
+$sql1 = "SELECT * FROM produit";
 
-$req = $db->prepare($sql);
+$req1 = $db->prepare($sql1);
 
-$req->execute();
+$req1->execute();
 
-$results = $req->fetchAll(PDO::FETCH_ASSOC);
+$results1 = $req1->fetchAll(PDO::FETCH_ASSOC);
+
+$sql2 = "SELECT produit.id_produit, produit_categorie.categorie, produit.produit, produit.nb, produit.prix, produit.tva, produit.ttc, produit.date FROM produit INNER JOIN produit_categorie ON produit_categorie.id_categorie = produit.id_categorie ORDER BY date DESC";
+
+
+$req2 = $db->prepare($sql2);
+
+$req2->execute();
+
+$results2 = $req2->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 <section class="container-fluid">
     <div class="row">
         <div class="col-3">
             <div class="AddStock">
+
+                <form class="cadre-or w-100" action="./requette/insert_produit.php" method="POST">
+                    <div class="text-white text-uppercase w-100 px-5 py-3">
+                        <h2 class="text-center border-b-or pb-2">Ajouter</h2>
+                        <div>
+                            <input type="hidden" name="id_user" id="id-user" value="<?= $_SESSION['id_user'] ?>">
+                        </div>
+                        <div>
+                            <label for="categorie">Catégorie :</label><br>
+                            <select class="w-100" name="id_categorie" id="categorie">
+                                <option value="">Catégorie</option>
+                                <?php foreach ($results2 as $produit) : ?>
+                                    <option value="<?= $produit['id_categorie'] ?>"><?= $produit['categorie'] ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="marque">Marque :</label><br>
+                            <input class="bg-gray text-white w-100" type="text" name="marque" id="marque">
+                        </div>
+                        <div>
+                            <label for="produit">Produit :</label><br>
+                            <input class="bg-gray text-white w-100" type="text" name="produit" id="produit">
+                        </div>
+                        <div>
+                            <label for="nb">nb :</label><br>
+                            <input class="bg-gray text-white w-100" type="text" name="nb" id="nb">
+                        </div>
+                        <div>
+                            <label for="unite">Prix uniter :</label><br>
+                            <input class="bg-gray text-white w-100" type="text" name="unite" id="unite">
+                        </div>
+                        <div>
+                            <label for="prix">Prix :</label>
+                            <input class="bg-gray text-white w-100" type="text" id="prix" name="prix">
+                        </div>
+                        <div>
+                            <label for="tva">Tva :</label><br>
+                            <input class="bg-gray text-white w-100" type="text" id="tva" name="tva">
+                        </div>
+                        <div>
+                            <label for="ttc">ttc :</label><br>
+                            <input class="bg-gray text-white w-100" type="text" id="ttc" name="ttc">
+                        </div>
+                        <div>
+                            <input type="hidden" id="date" name="date" value="<?= date('Y/m/d') ?>">
+                        </div>
+                        <div class="mt-2">
+                            <input class="bg-gray butAdd rounded-2 w-100" type="submit" value="Ajouter">
+                        </div>
+                    </div>
+                </form>;
 
             </div>
         </div>
@@ -27,31 +88,31 @@ $results = $req->fetchAll(PDO::FETCH_ASSOC);
             <table class="cadre-or text-center w-100">
                 <thead>
                     <tr class="text-uppercase text-or">
-                        <th class="p-3" scope="col">id</th>
-                        <th class="p-3" scope="col">Catégorie</th>
-                        <th class="p-3" scope="col">Produit</th>
-                        <th class="p-3" scope="col">nb</th>
-                        <th class="p-3" scope="col">Prix</th>
-                        <th class="p-3" scope="col">Tva</th>
-                        <th class="p-3" scope="col">Ttc</th>
+                        <th class="ps-2 py-2" scope="col">id</th>
+                        <th class="ps-2 py-2" scope="col">Catégorie</th>
+                        <th class="ps-2 py-2" scope="col">Produit</th>
+                        <th class="ps-2 py-2" scope="col">nb</th>
+                        <th class="ps-2 py-2" scope="col">Prix</th>
+                        <th class="ps-2 py-2" scope="col">Ttc</th>
+                        <th class="ps-2 py-2" scope="col">date</th>
                         <?php if ($_SESSION['connect'] == 1 && $_SESSION['status'] == 'admi') : ?>
-                            <th class="text-capitalize p-3" scope="col"><button class="ButAddStock butAdd ps-2 py-1">inscription</button></th>
+                            <th class="text-capitalize" scope="col"><button class="ButAddStock butAdd my-2">Ajouter</button></th>
                         <?php endif; ?>
                     </tr>
                 </thead>
-                <?php foreach ($results as $user) : ?>
+                <?php foreach ($results2 as $produit) : ?>
                     <tbody>
                         <tr class="cadre-or">
-                            <th data-target="id-produit" class="text-red p-3" scope="row"><?= '...' ?></th>
-                            <th data-target="categorie" class="text-muted p-3" scope="row"><?= '...' ?></th>
-                            <td data-target="produit" class="text-muted py-3 px-0"><?= '...' ?></td>
-                            <td data-target="nb" class="text-muted py-3 px-0"><?= '...' ?></td>
-                            <td data-target="prix" class="text-muted py-3 px-0"><?= '...' ?></td>
-                            <td data-target="tva" class="text-muted py-3 px-0"><?= '...' ?></td>
-                            <td data-target="ttc" class="text-muted py-3 px-0"><?= '...' ?></td>
+                            <td data-target="Update_id-produit" class="text-red text-capitalize fw-bold ps-2 py-2 px-0" scope="row"><?= $produit['id_produit'] ?></td>
+                            <td data-target="Update_categorie" class="text-muted text-capitalize ps-2 py-2"><?= $produit['categorie'] ?></td>
+                            <td data-target="Update_produit" class="text-muted text-capitalize ps-2 py-2"><?= $produit['produit'] ?></td>
+                            <td data-target="Update_nb" class="text-muted text-capitalize ps-2 py-2"><?= $produit['nb'] ?></td>
+                            <td data-target="Update_prix" class="text-muted text-capitalize ps-2 py-2"><?= $produit['prix'] ?> €</td>
+                            <td data-target="Update_ttc" class="text-muted text-capitalize ps-2 py-2"><?= $produit['ttc'] ?> €</td>
+                            <td data-target="Update_ttc" class="text-muted text-capitalize ps-2 py-2"><?= $produit['date'] ?></td>
                             <?php if ($_SESSION['connect'] == 1 && $_SESSION['status'] == 'admi') : ?>
-                                <td class="text-muted"><button class="ButUpdateStock butUpdate ps-2 py-1">Modifier</button></td>
-                                <td class="text-muted"><a class="butDelete ps-2 py-1" href="./requette/delete_user.php?id=<?= $user['id_user']; ?>">Supprimer</a></td>
+                                <td class="text-muted"><button class="ButUpdateStock butUpdate ps-2 my-3">Modifier</button></td>
+                                <td class="text-muted"><a class="butDelete ps-2 my-3" href="./requette/delete_user.php?id=<?= $produit['id_produit']; ?>">Supprimer</a></td>
                             <?php endif; ?>
                         </tr>
                     </tbody>
@@ -61,40 +122,48 @@ $results = $req->fetchAll(PDO::FETCH_ASSOC);
         </div>
         <div class="col-3">
             <div class="UpdateStock">
-                <form class="cadre-or w-100" action="./requette/update_stock.php" enctype="multipart/form-data" method="POST">
+                <form class="cadre-or w-100" action="./requette/update_stock.php" method="POST">
                     <div class="text-white text-uppercase w-100 px-5 py-3">
                         <h2 class="text-center border-b-or pb-2">Modifier</h2>
                         <div>
-                            <input type="hidden" name="id-produit" id="id-produit">
+                            <input type="hidden" name="id_produit" id="Update_id-produit">
                         </div>
                         <div>
                             <label for="categorie">Catégorie :</label><br>
-                            <select class="w-100" name="categorie" id="categorie">
+                            <select class="w-100" name="categorie" id="Update_categorie">
                                 <option value=""></option>
-                                <?php foreach ($genre['genres'] as $categorie_film) : ?>
-                                    <option value="<?= $categorie_film['id'] ?>"><?= $categorie_film['name'] ?></option>
+                                <?php foreach ($results2 as $result) : ?>
+                                    <option value="<?= $result['id_categorie'] ?>"><?= $result['categorie'] ?></option>
                                 <?php endforeach; ?>
                             </select>
                         </div>
                         <div>
+                            <label for="marque">Marque :</label><br>
+                            <input class="bg-gray text-white w-100" type="text" name="marque" id="Update_marque">
+                        </div>
+                        <div>
                             <label for="produit">Produit :</label><br>
-                            <input class="bg-gray text-white w-100" type="text" name="produit" id="produit" placeholder="Change Produit">
+                            <input class="bg-gray text-white w-100" type="text" name="produit" id="Update_produit" placeholder="Change Produit">
                         </div>
                         <div>
                             <label for="nb">nb :</label><br>
-                            <input class="bg-gray text-white w-100" type="text" name="nb" id="nb" placeholder="Change NB">
+                            <input class="bg-gray text-white w-100" type="text" name="nb" id="Update_nb" placeholder="Change NB">
+                        </div>
+                        <div>
+                            <label for="unite">Prix uniter :</label><br>
+                            <input class="bg-gray text-white w-100" type="text" name="unite" id="Update_unite" placeholder="Change unite">
                         </div>
                         <div>
                             <label for="prix">Prix :</label>
-                            <input class="bg-gray text-white w-100" type="text" id="prix" name="prix" placeholder="Change Prix">
+                            <input class="bg-gray text-white w-100" type="text" id="prix" name="Update_prix" placeholder="Change Prix">
                         </div>
                         <div>
                             <label for="tva">Tva :</label><br>
-                            <input class="bg-gray text-white w-100" type="text" id="tva" name="tva" placeholder="Change TVA">
+                            <input class="bg-gray text-white w-100" type="text" id="tva" name="Update_tva" placeholder="Change TVA">
                         </div>
                         <div>
                             <label for="ttc">ttc :</label><br>
-                            <input class="bg-gray text-white w-100" type="text" id="ttc" name="ttc" placeholder="Change TTC">
+                            <input class="bg-gray text-white w-100" type="text" id="ttc" name="Update_ttc" placeholder="Change TTC">
                         </div>
                         <div class="mt-2">
                             <input class="bg-gray butAdd rounded-2 w-100" type="submit" value="Modifier">

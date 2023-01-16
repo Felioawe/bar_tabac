@@ -154,52 +154,7 @@ function openAddStock() {
     $('.ButAddStock').on('click', () => {
         
         $('.AddStock').toggle();
-        $('.AddStock').html(`  
         
-        <form class="cadre-or w-100" action="./requette/add_stock.php" enctype="multipart/form-data" method="POST">
-            <div class="text-white text-uppercase w-100 px-5 py-3">
-                <h2 class="text-center border-b-or pb-2">Ajouter</h2>
-                <div>
-                    <input type="hidden" name="id-produit" id="id-produit">
-                </div>
-                <div>
-                    <label for="categorie">Catégorie :</label><br>
-                    <select class="w-100" name="categorie" id="categorie">
-                            <option value=""></option>
-                            <?php foreach ($genre['genres'] as $categorie_film) : ?>
-                                <option value="<?= $categorie_film['id'] ?>"><?= $categorie_film['name'] ?></option>
-                            <?php endforeach; ?>
-                    </select>
-                </div>
-                <div>
-                    <label for="produit">Produit :</label><br>
-                    <input class="bg-gray text-white w-100" type="text" name="produit" id="produit">
-                </div>
-                <div>
-                    <label for="nb">nb :</label><br>
-                    <input class="bg-gray text-white w-100" type="text" name="nb" id="nb">
-                </div>
-                <div>
-                    <label for="unite">unité :</label>
-                    <input class="bg-gray text-white w-100" type="text" id="unite" name="unite">
-                </div>
-                <div>
-                    <label for="prix">Prix :</label>
-                    <input class="bg-gray text-white w-100" type="text" id="prix" name="prix">
-                </div>
-                <div>
-                    <label for="tva">Tva :</label><br>
-                    <input class="bg-gray text-white w-100" type="text" id="tva" name="tva">
-                </div>
-                <div>
-                    <label for="ttc">ttc :</label><br>
-                    <input class="bg-gray text-white w-100" type="text" id="ttc" name="ttc">
-                </div>
-                <div class="mt-2">
-                    <input class="bg-gray butAdd rounded-2 w-100" type="submit" value="Ajouter">
-                </div>
-            </div>
-        </form>`);
     });
 }
 
