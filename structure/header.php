@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./structure/feuille.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./structure/feuille.css">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
@@ -81,8 +81,8 @@
                     <img class="logo-profil radius-100" src="./img_profil/profil.png">
                 </div>
             <?php endif; ?>
-                <div class="text-center my-3">
-                    <a class="text-decoration-none text-white text-uppercase" href="./profil.php"><?= $_SESSION['user']; ?></a>
+                <div class="text-center div-Profil my-3">
+                    <a class="text-decoration-none text-green text-uppercase ms-2" href="./profil.php"><?= $_SESSION['user']; ?><i class="ms-2 fa-solid fa-bars"></i></a>
                 </div>
                 <div class="text-center mb-3">
                     <a class="butDisconnect" href="./requette/disconnect.php">Disconnect</a>
