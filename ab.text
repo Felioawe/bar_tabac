@@ -15,3 +15,13 @@
         </div>
     </div>
 </div>
+
+
+
+
+
+
+
+
+
+<td class="text-muted"><a class="butDelete ps-2 py-1" onclick="confirmDelete(<?= $user['id_user']; ?>);">Supprimer</a></td>

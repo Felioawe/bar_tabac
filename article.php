@@ -12,9 +12,15 @@
                     <p class="article-mes mx-4 my-4"><?= $result['mes'] ?></p>
                     <p class="article-date px-5"><?= $result['date'] ?></p>
                 </div>
-                <div class="d-flex justify-content-between align-items-center my-4">
-                    <a class="butDelete ms-3 py-2 px-3" href="requette/delete_article.php?id= <?= $result['id_blog'] ?>">Supprimer</a>
-                    <a class="cards-but radius-11 text-decoration-none text-uppercase mb-2 me-3" href="./contact.php">contacter</a>
+                <div class="d-flex justify-content-between align-items-center my-4 px-4">
+                <?php if (isset($_SESSION['connect']) && $_SESSION['connect'] == 1 && isset($_SESSION['status']) && $_SESSION['status'] == 'admi') : ?>
+                    <form id="form_delete_article" action="./evenement.php" method="get">
+                        <input type="hidden" name="id" value="<?= $result['id_blog'] ?>">
+                        <input type="hidden" name="mod" value="3">
+                        <button class="butDelete"type="submit">Supprimer</button>
+                    </form>
+                <?php endif; ?>
+                    <a class="cards-but radius-11 text-decoration-none text-uppercase fs-8" href="./contact.php">contacter</a>
                 </div>
             </div>
         </div>

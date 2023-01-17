@@ -28,7 +28,9 @@
     <?php require_once "./requette/config.php"; ?>
     <?php require_once "modal_user.php"; ?>
     <?php require_once "modal_success_ou_erreur.php"; ?>
+    <?php require_once "modal_verif.php"; ?>
     <a class="d-none js-modal" href="#mod2"></a>
+    <a class="d-none js-modal" href="#mod3"></a>
     <header>
         <nav class="menu">
             <div class="navbar d-flex  m-auto w-85">

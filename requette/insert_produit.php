@@ -42,13 +42,15 @@ if (isset($_POST['id_categorie']) && isset($_POST['id_user']) && isset($_POST['m
     
 
     if ($req) {
-        // header("location: ../evenement.php");
+        header("location: ../stock.php?mod=2&success=2");
         echo'envoi';
     }
     else {
         echo"erreur d'envoi";
+        header("location: ../stock.php?mod=2&erreur=2");
     }
 
 }
+
 
 ?>

@@ -64,3 +64,12 @@ else if (paramValue == 2) {
     element.dispatchEvent(event);
   }
 } 
+else if (paramValue == 3) {
+  const element = document.querySelector(`[href='#mod3']`);
+  
+  if(element) {
+    const event = new Event('click');
+    event.target = element;
+    element.dispatchEvent(event);
+  }
+} 

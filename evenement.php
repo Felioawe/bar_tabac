@@ -7,7 +7,7 @@ require_once "./structure/function.php";
 
 <section class="la-carte shadow1 p-3 w-85 m-auto">
     <?php $result = get_article($db, 0); ?>
-    <div class="container-fluid bg-or my-5">
+    <div class="container-fluid g-0 bg-or my-5">
         <div class="row">
             <?php foreach ($result as $add) : ?>
                 <?php echo article($add); ?>
@@ -20,7 +20,7 @@ require_once "./structure/function.php";
     <?php if ($_SESSION['connect'] == 1 && $_SESSION['status'] == 'admi') : ?>
         <section class="w-85 m-auto">
             <div class="d-flex flex-column cadre-or text-white p-4 my-5">
-                <form action="./requette/insert_article.php" enctype="multipart/form-data" method="POST">
+                <form id="form_addArticle" action="./requette/insert_article.php" enctype="multipart/form-data" method="POST">
                     <div class="w-25 m-auto text-center">
                         <h2 class="afert1 m-0 pb-2">Article</h2>
                         <h2 class="afert2"></h2>
@@ -28,11 +28,14 @@ require_once "./structure/function.php";
                     <div class="d-flex flex-column">
                         <div>
                             <label for="titre">Titre :</label><br>
-                            <input class="bg-gray text-white" type="text" name="titre" id="titre">
+                            <input class="bg-gray text-white" type="text" name="titre" id="Aad_titre">
                         </div>
                         <div>
                             <label for="mes">Votre message :</label><br>
-                            <textarea class="bg-gray text-white w-100" name="mes" id="mes" cols="30" rows="10"></textarea>
+                            <textarea class="bg-gray text-white w-100" name="mes" id="Aad_mes" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <p class="erreur_addArticle text-black w-100 py-2 m-0">.</p>
                         </div>
                         <div>
                             <input type="hidden" name="id_user" value="<?= $_SESSION['id_user']; ?>">

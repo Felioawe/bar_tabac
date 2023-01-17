@@ -48,7 +48,13 @@ $results = $req->fetchAll(PDO::FETCH_ASSOC);
                             <td class="text-muted text-uppercase pe-2 py-2"><?= $user['status']; ?></td>
                             <?php if ($_SESSION['connect'] == 1 && $_SESSION['status'] == 'admi' ) : ?>
                                 <td class="text-muted"><button class="ButUpdateLogin butUpdate ps-2 my-2 text-capitalize">Modifier</button></td>
-                                <td class="text-muted"><a class="butDelete ps-2 py-1" href="./requette/delete_user.php?id=<?= $user['id_user']; ?>">Supprimer</a></td>
+                                <td class="text-muted">
+                                    <form id="form_delete_user" action="./compte.php" method="get">
+                                        <input type="hidden" name="id" value="<?= $user['id_user']; ?>">
+                                        <input type="hidden" name="mod" value="3">
+                                        <button class="butDelete ps-2 py-1"type="submit">Supprimer</button>
+                                    </form>
+                                </td>
                             <?php endif; ?>
                         </tr>
                     </tbody>

@@ -66,7 +66,7 @@ function Select_id_table(PDO $db, $tab, $key, $id) {
 
 
 function article($add) {
-    return '<div class="col-12 col-md-6 col-lg-4 col-xl-3 p-3">
+    $output = '<div class="col-12 col-md-6 col-lg-4 col-xl-3 p-3">
                 <div class="cards">
                     <div class="cards-img">
                         <img class="w-100 h-250" src="./upload/'.$add['img'].'" alt="">
@@ -78,12 +78,20 @@ function article($add) {
                         <h5 class="cards-titre">'.$add['titre'].'</h5>
                         <p class="cards-mes">'.$add['mes'].'</p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <p class="cards-date">'.$add['date'].'</p>
-                            <a class="butDelete" href="./requette/delete_article.php?id='.$add['id_blog'].'">Supprimer</a>
-                        </div>
+                            <p class="cards-date">'.$add['date'].'</p>';
+                if (isset($_SESSION['connect']) && $_SESSION['connect'] == 1 && isset($_SESSION['status']) && $_SESSION['status'] == 'admi') { 
+                            $output .= '<form id="form_delete_article" action="./evenement.php" method="get">
+                                            <input type="hidden" name="id" value="'.$add['id_blog'].'">
+                                            <input type="hidden" name="mod" value="3">
+                                            <button class="butDelete ps-2 py-1"type="submit">Supprimer</button>
+                                        </form>';}
+                $output .= 
+                       '</div>
                     </div>
                 </div>
-            </div>';
-
+               </div>';
+    return $output;
 }
+
 ?>
+                                    

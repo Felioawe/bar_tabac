@@ -12,7 +12,7 @@
     $req->execute([":id" => $id]);
 
     if ($req) {
-        header("location: ../compte.php?mod=2&success=4" );
+        header("location: ../compte.phpC" );
     }
     elseif ($req == false) {
         header("location: ../compte.php?mod=2&erreur=3" );

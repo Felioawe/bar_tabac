@@ -43,6 +43,7 @@
 .logo-profil {height: 100px; width:100px; z-index: 3;} 
 .logo {height: 70px; width:190px;}
 .bg-gray {background: rgb(48, 48, 49);}
+.text-blue {color:rgb(0, 110, 213)!important;}
 .text-red {color: rgb(117, 4, 4);}
 .text-green {color: rgb(0, 147, 27);}
 .text-or {color: #c5a154;}
@@ -74,7 +75,7 @@ h2 {position: relative;}
 .after1:after {position:absolute; content:""; bottom: 0; left: -5%; height: 1.5px; width: 110%; background: #c5a154;}
 .after2:after {position:absolute; content:""; bottom: -6px; left: -10%; height: 2.3px; width: 120%; background: #c5a154;}
 
-input:focus-visible, textarea:focus-visible {outline: none !important;}
+input:focus-visible, textarea:focus-visible, select:focus-visible {outline: none !important;}
 
 .form-regex-green {box-shadow: 2px 3px 8px 0px rgb(5, 100, 0) !important;}
 .form-regex-red {box-shadow: 2px 3px 8px 0px rgb(141 2 2) !important;}
@@ -82,7 +83,7 @@ input:focus-visible, textarea:focus-visible {outline: none !important;}
 /* *************************************************************** header *************************************************************** */
 .m-auto-s {margin: auto auto auto 120px;}
 .menu {background: #000 !important; position: fixed; z-index: 2; width: 100%;}
-.menuAdmi {position: fixed; z-index: 3; top:116px; right: 0; height: 100vh; width: 0px; transition: all 0.5s ease-in-out;}
+.menuAdmi {position: fixed; z-index: 3; top:126px; right: 0; height: 100vh; width: 0px; transition: all 0.5s ease-in-out;}
 
 .butDisconnect {text-decoration: none; border: 1px solid #292929; border-radius: 25px; padding: 5px 10px; color: rgb(88, 88, 88); transition: 0.5s;}
 .butDisconnect:hover {text-decoration: none; border: 1px solid #fff; color:rgb(150, 0, 0);}

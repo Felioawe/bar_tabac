@@ -91,7 +91,7 @@ function openAddLogin() {
         if (paramValue == 1) {
             $(".erreur_AddLogin").html(`
             
-                <p class="text-red w-100 m-0">user est disponible</p>
+                <p class="text-red w-100 m-0">user est indisponible</p>
             
             `);
         }
@@ -140,7 +140,7 @@ function openUpadateLogin() {
         if (paramValue == 1) {
             $(".erreur_AddLogin").html(`
             
-                <p class="text-red w-100 m-0">user est disponible</p>
+                <p class="text-red w-100 m-0">user est indisponible</p>
             
             `);
         }
@@ -155,6 +155,28 @@ function openAddStock() {
         
         $('.AddStock').toggle();
         
+        $('#form_AddStock').on('submit', function(e) {
+            e.preventDefault();
+            var categorie = $('#Stock_categorie').val();
+            var marque = $('#Stock_marque').val();
+            var produit = $('#Stock_produit').val();
+            var unite = $('#Stock_unite').val();
+            var prix = $('#Stock_prix').val();
+            var tva = $('#Stock_tva').val();
+            var ttc = $('#Stock_ttc').val();
+    
+            if (categorie === '' || marque === '' || produit === '' || unite === '' || prix === ''|| tva === '' || ttc === '') {
+                // alert('Veuillez remplir tous les champs');
+                $('.erreur_AddStock').html(`
+    
+                    <p class="text-red w-100 m-0">Remplissez tous les champs</p>
+                
+                `);
+            } else {
+                $(this).unbind('submit').submit();
+            }
+        });
+        
     });
 }
 
@@ -166,8 +188,52 @@ function openUpadateStok() {
         
         $('.UpdateStock').toggle()
 
+        $('#form_UpdateStock').on('submit', function(e) {
+            e.preventDefault();
+            var categorie = $('#Update_categorie').val();
+            var marque = $('#Update_marque').val();
+            var produit = $('#Update_produit').val();
+            var unite = $('#Update_unite').val();
+            var prix = $('#Update_prix').val();
+            var tva = $('#Update_tva').val();
+            var ttc = $('#Update_ttc').val();
+    
+            if (categorie === '' || marque === '' || produit === '' || unite === '' || prix === ''|| tva === '' || ttc === '') {
+                // alert('Veuillez remplir tous les champs');
+                $('.erreur_UpdateStock').html(`
+    
+                    <p class="text-red w-100 m-0">Remplissez tous les champs</p>
+                
+                `);
+            } else {
+                $(this).unbind('submit').submit();
+            }
+        });
+
     });
 }
 
 openUpadateStok();
 
+
+function addArticle() {
+  
+    $('#form_addArticle').on('submit', function(e) {
+        e.preventDefault();
+        var titre = $('#Aad_titre').val();
+        var mes = $('#Aad_mes').val();
+
+        if (titre === '' || mes === '') {
+            // alert('Veuillez remplir tous les champs');
+            $('.erreur_addArticle').html(`
+
+                <p class="text-red w-100 m-0">Remplissez tous les champs</p>
+            
+            `);
+        } else {
+            $(this).unbind('submit').submit();
+        }
+    });
+}
+
+addArticle();

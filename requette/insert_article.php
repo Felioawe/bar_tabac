@@ -4,8 +4,8 @@ var_dump($_POST);
 var_dump($_FILES);
 
 
-if (isset($_POST['mes']) && isset($_POST['date'])
-&& !empty($_POST['mes']) && !empty($_POST['date'])) {
+if (isset($_POST['titre']) && isset($_POST['mes'])
+&& !empty($_POST['titre']) && !empty($_POST['mes'])) {
     echo'envoi';
 
     $titre = $_POST['titre'];
@@ -33,11 +33,12 @@ if (isset($_POST['mes']) && isset($_POST['date'])
         ':img'=> $img
     ]);
     if ($req) {
-        header("location: ../evenement.php");
+        header("location: ../evenement.php?mod=2&success=2");
         echo'envoi';
     }
     else {
         echo"erreur d'envoi";
+        header("location: ../evenement.php?mod=2&erreur=2");
     }
 
 }

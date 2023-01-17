@@ -10,17 +10,13 @@ const contactRegex = (target, regex) => {
         $(target).removeClass('form-regex-red');
     }
 
-    else if ($(target).val() != regex && $(target).val() !== ''){
+    // else if ($(target).val() != regex && $(target).val() !== ''){
+    else{
 
         $(target).removeClass('form-regex-green');
         $(target).addClass('form-regex-red'); 
     }
 
-    else {
-        
-        $(target).removeClass('form-regex-red');
-        $(target).removeClass('form-regex-green');
-    }
 }
 function Check_conctactRegex(){
     
@@ -34,7 +30,7 @@ function Check_conctactRegex(){
 
 $('.input-contact').on('input',Check_conctactRegex);
 
-$('#form').on('submit', (e) =>{
+$('#form_contact').on('submit', (e) =>{
 
     if($('.form-regex-green').length != nb_champ){
         

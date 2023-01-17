@@ -12,6 +12,8 @@
             <p class="text-red w-100 m-0 p-0">Modifier en echec</p>
           <?php elseif ($erreur == "3") : ?>
             <p class="text-red w-100 m-0 p-0">Erreur de Suppréssion</p>
+          <?php elseif ($erreur == "4") : ?>
+            <p class="text-red w-100 m-0 p-0">Envoi du messege en echec</p>
           <?php endif; ?>
         <?php elseif (isset($_GET['success']) && !empty($_GET['success'])) : ?>
           <?php $success = $_GET['success']; ?>
@@ -24,7 +26,12 @@
             <p class="text-green w-100 m-0 p-0">Modifier avec success</p>
           <?php elseif ($success == "4") : ?>
             <p class="text-green w-100 m-0 p-0">Supprimer avec success</p>
+          <?php elseif ($success == "5") : ?>
+            <p class="text-blue w-100 m-0 p-0">Vous êtes déconnecter</p>
+          <?php elseif ($success == "6") : ?>
+            <p class="text-blue w-100 m-0 p-0">Message envoyé</p>
           <?php endif; ?>
+        <?php else: ?>
         <?php endif; ?>
       </div>
     </form>

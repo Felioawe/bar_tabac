@@ -31,7 +31,7 @@
                 </div>
             </div>
             <div class="col-12 col-lg-8 px-3 mt-5">
-                <form id="form" action="./requette/insert_contact.php" method="post">
+                <form id="#form_contact" action="./requette/insert_contact.php" method="post">
                     <div class="row">
                         <div class="col-12 col-sm-7 position-relative">
                             <input class="input-contact w-100 mb-3 bg-secondary p-2 text-white bg-opacity-25" type="text" id="name" name="name" placeholder="Votre nom">
@@ -55,11 +55,14 @@
                             <textarea class="input-contact w-100 mb-4 p-1 bg-secondary p-2 text-white bg-opacity-25" id="msg" name="msg" rows="10" placeholder="Votre message" style="resize: none;"></textarea>
                         </div>
                     </div>
+                    <div>
+                        <input type="hidden" id="date" name="date" value="<?= date('Y/m/d');?>">
+                    </div>
                     <div class="icon2 position-relative py-5">
-
+                    
                     </div>
                     <div>
-                        <input type="submit" class="contact-but text-uppercase py-1 place px-3">
+                        <input type="submit" class="input-contact contact-but text-uppercase py-1 place px-3">
                     </div>
                 </form>
             </div>

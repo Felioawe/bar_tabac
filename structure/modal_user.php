@@ -24,7 +24,7 @@
                     <?php endif ; ?>
                 <?php endif ; ?>
                 <div class="mt-5 text-center">
-                    <input class=" butConnect rounded-2 w-25" type="submit" value="Connect">
+                    <input class="butConnect rounded-2 w-25" type="submit" value="Connect">
                 </div>
             </div>
         </form>
