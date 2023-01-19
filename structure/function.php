@@ -18,7 +18,7 @@ function get_article(PDO $db, $nb, $id = "") {
         
         $req->execute(); 
 
-        return  $req->fetchAll();
+        return  $req->fetchAll(PDO::FETCH_ASSOC);
     } 
 
     elseif ($id !== "" && $nb == "") {
@@ -39,7 +39,7 @@ function get_article(PDO $db, $nb, $id = "") {
         
         $req->execute();
         
-        return  $req->fetchAll();
+        return  $req->fetchAll(PDO::FETCH_ASSOC);
     }
     
 }

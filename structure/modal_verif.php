@@ -9,7 +9,7 @@
     <?php endif; ?>
             <div class="text-center text-uppercase pt-2 px-2">
                 <p class="m-0 text-blue">Confimez-vous la suppréssion ?</p>
-                <input type="hidden" name="id" value="<?= $_GET['id'] ?>">
+                <input type="hidden" id="id" name="id" value="<?= isset($_GET['id']) ? $_GET["id"] : NULL;  ?>">
             </div>
             <div class="d-flex justify-content-evenly align-items-center pb-2 px-2">
                 <button type="submit" class="butDelete m-2">Supprimer</button>

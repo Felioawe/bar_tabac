@@ -22,6 +22,17 @@
 
 
 
+19/10/2022
+au	29/11/2022 dossier rose 
+
+
 
 
 <td class="text-muted"><a class="butDelete ps-2 py-1" onclick="confirmDelete(<?= $user['id_user']; ?>);">Supprimer</a></td>
+
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Felioawe/Teste-maquette..git
+git push -u origin main

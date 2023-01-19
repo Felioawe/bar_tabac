@@ -1,4 +1,3 @@
-console.log('test');
 $(".butUpdate").each(function () {
     $(this).on("click", function () {
         var tdValues = $(this).closest("tr").find("td");       

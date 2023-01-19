@@ -40,7 +40,7 @@
                 <div class="navbar">
                     <i class="fa fa-mobile text-white"></i>
                     <p class="m-0 px-3 text-or"> 06 XX XX XX</p>
-                    <i class="fa fa-envelope text-white"></i><a class="m-0 mb-1 text-or px-3 text-decoration-none" href="mailto:contact@pandao.eu"> contact@pandao.eu</a>
+                    <i class="fa fa-envelope text-white"></i><a class="m-0 mb-1 text-or px-3 text-decoration-none" href="./contact.php">contact@bistrot.com</a>
 
                     <?php $butAdmi = ''; ?>
                     <?php if (isset($_SESSION['connect']) && !empty($_SESSION['connect'])) : ?>

@@ -40,7 +40,7 @@ $results = $req->fetchAll(PDO::FETCH_ASSOC);
                 <?php foreach ($results as $user) : ?>
                     <tbody>
                         <tr>
-                            <td data-target="id-user" class="fw-bold text-red text-capitalize ps-2"><?= $user['id_user']; ?></td>
+                            <td data-target="Update_id-user" class="fw-bold text-red text-capitalize ps-2"><?= $user['id_user']; ?></td>
                             <td data-target="Update_name" class="text-muted text-capitalize ps-2 py-2"><?= $user['name']; ?></td>
                             <td data-target="Update_user" class="text-muted text-capitalize ps-2 py-2"><?= $user['user']; ?></td>
                             <td data-target="Update_tel" class="text-muted text-capitalize ps-2 py-2"><?= $user['tel']; ?></td>
@@ -68,7 +68,7 @@ $results = $req->fetchAll(PDO::FETCH_ASSOC);
                     <div class="text-white text-uppercase w-100 px-5 py-3">
                         <h2 class="text-center border-b-or pb-2">Modifier</h2>
                         <div>
-                            <input type="hidden" name="id-user" id="id-user">
+                            <input type="hidden" name="id-user" id="Update_id-user">
                         </div>
                         <div>
                             <label for="name">Non :</label><br>

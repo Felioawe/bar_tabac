@@ -73,7 +73,6 @@ h1, h2, h3, h4 {
 
 /* .div-Profil:hover {color: #0d6efd !important;} */
 .fa-bars {color: #585858 !important;}
-.div-Profil a:hover {color: red !important;}
 
 h2 {position: relative;}
 .after1:after {position:absolute; content:""; bottom: 0; left: -5%; height: 1.5px; width: 110%; background: #c5a154;}
