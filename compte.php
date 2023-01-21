@@ -15,15 +15,15 @@ $results = $req->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <section class="container-fluid">
     <div class="row">
-        <div class="col-3">
-            <div class="AddLogin">
+        <div class="col-12 col-lg-3">
+            <div class="AddLogin mt-5">
             </div>
         </div>
-        <div class="col-6">
-            <div class="cadre-or border-bottom-0">
+        <div class="col-12 col-lg-6">
+            <div class="cadre-or border-bottom-0 mt-5">
                 <h1 class="text-uppercase fs-4 text-center m-0 py-2">Compte</h1>
             </div>
-            <table class="cadre-or text-center w-100">
+            <table class="cadre-or text-center w-100 mb-5">
                 <thead class="cadre-or">
                     <tr class="bg-muted text-uppercase">
                         <th class="text-red ps-2 py-2" scope="col">id</th>
@@ -62,8 +62,8 @@ $results = $req->fetchAll(PDO::FETCH_ASSOC);
 
             </table>
         </div>
-        <div class="col-3">
-            <div class="UpdateLogin">
+        <div class="col-12 col-lg-3">
+            <div class="UpdateLogin mt-5">
                 <form id="form_UpdateLogin" class="cadre-or w-100" action="./requette/update_user.php" enctype="multipart/form-data" method="POST">
                     <div class="text-white text-uppercase w-100 px-5 py-3">
                         <h2 class="text-center border-b-or pb-2">Modifier</h2>

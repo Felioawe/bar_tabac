@@ -24,8 +24,8 @@ $results2 = $req2->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <section class="container-fluid">
     <div class="row">
-        <div class="col-3">
-            <div class="AddStock">
+        <div class="col-12 col-lg-3">
+            <div class="AddStock mt-5">
 
                 <form id="form_AddStock" class="cadre-or w-100" action="./requette/insert_produit.php" method="POST">
                     <div class="text-white text-uppercase w-100 px-5 py-3">
@@ -84,8 +84,8 @@ $results2 = $req2->fetchAll(PDO::FETCH_ASSOC);
 
             </div>
         </div>
-        <div class="col-6">
-        <form class="cadre-or d-flex justify-content-between p-2" action="./stock_catégorie.php">
+        <div class="col-12 col-lg-6">
+        <form class="cadre-or d-flex justify-content-between p-2 mt-5" action="./stock_catégorie.php">
             <select class="butConnect rounded-3" name="id_categorie" id="Stock_categorie">
                 <option class="bg-black" value="">Recherche Catégorie</option>
                 <?php foreach ($results1 as $produit) : ?>
@@ -97,7 +97,7 @@ $results2 = $req2->fetchAll(PDO::FETCH_ASSOC);
             <div class="cadre-or border-bottom-0">
                 <h1 class="text-uppercase fs-4 text-center m-0 py-2">Stock</h1>
             </div>
-            <table class="cadre-or text-center w-100">
+            <table class="cadre-or text-center w-100 mb-5">
                 <thead>
                     <tr class="text-uppercase text-or">
                         <th class="ps-2 py-2" scope="col">id</th>
@@ -138,8 +138,8 @@ $results2 = $req2->fetchAll(PDO::FETCH_ASSOC);
 
             </table>
         </div>
-        <div class="col-3">
-            <div class="UpdateStock">
+        <div class="col-12 col-lg-3">
+            <div class="UpdateStock mt-5">
                 <form id="form_UpdateStock" class="cadre-or w-100" action="./requette/update_produit.php" method="POST">
                     <div class="text-white text-uppercase w-100 px-5 py-3">
                         <h2 class="text-center border-b-or pb-2">Modifier</h2>

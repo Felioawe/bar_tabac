@@ -1,3 +1,4 @@
+
 let modal = null;
 const openModal = function (e) {
   e.preventDefault();

@@ -107,17 +107,62 @@ input:focus-visible, textarea:focus-visible, select:focus-visible {outline: none
 .container-menu-secondaire-1:hover .sous-menu-1, .container-menu-secondaire-2:hover .sous-menu-2, .container-menu-secondaire-3:hover .sous-menu-3, .container-menu-secondaire-4:hover .sous-menu-4, .container-menu-secondaire-5:hover .sous-menu-5, .container-menu-secondaire-6:hover .sous-menu-6 {max-height: 200px; transition: all 1.5s ease-in-out;}
 
 .bg-bandeau {position: relative;}
+.bandeau {height: 500px; width:100%;}
 .bandeau-title {position: absolute; top: 0%; right: 0%; height: 100%; width: 100%; display: flex; justify-content: center; align-items: center; text-align: center;}
 .header-title {color: #fff;}
 .bandeau-transparent1 {background: rgb(0,0,0); background: linear-gradient(180deg, transparent -5%, rgba(0,0,0,1) 80%); height: 150px; position: relative; margin-top: -180px;}
 .bandeau-transparent2 {background: rgb(0,0,0); background: linear-gradient(0deg, transparent -5%, rgba(0,0,0,1) 80%); height: 150px; position: relative;}
-
+.text-scroll {height: 165px; overflow-y: scroll;}
 @keyframes rotating {
 
     from {transform: rotate(0deg);}
     to {transform: rotate(360deg);}
 }
 .animation {animation: rotating 2s linear infinite;}
+
+.border-or {border: #c5a154 1px solid !important; box-shadow: none !important;}
+.nav-burger {display: none;}
+.title-header {max-height: 500px; width:100%;}
+.title-header-after {margin-top: -70px;}
+.grand-slider-img {height: 720px;}
+.petit-slider-img {height: 400px;}
+.title-header {font-size: 90px;}
+
+@media (max-width: 900px) {
+    .title-header {font-size: 60px;}
+    .title-header-after {margin-top: -40px;}
+    .bandeau {height: 400px;}
+}
+@media (max-width: 769px) {
+    .grand-slider-img {height: 520px;}
+}
+@media (max-width: 608px) {
+    .menuAdmi {top: 170px;}
+    .title-header {font-size: 40px;}
+    .title-header-after {margin-top: -40px;}
+    .grand-slider-img {height: 420px; margin-top: 50px}
+    .bandeau {height: 400px; margin-top: 50px}
+    .petit-slider-img {height: 300px;}
+    .navlogo{justify-content: center;}
+    
+}
+@media (max-width: 500px) { 
+    .nav-time {display: none !important;}
+    .nav-burger {display: block;}
+    .menuAdmi {top: 185px;}
+    .title-header {font-size: 25px;}
+    .grand-slider-img {margin-top: 69px;}
+    .bandeau {height: 400px; margin-top: 69px}
+}
+@media (max-width: 430px) { 
+    .openBurger .menuAdmi {width: 100% !important;}
+}
+@media (max-width: 385px) { 
+    .grand-slider-img {height: 320px; margin-top: 90px}
+    .menuAdmi {top: 209px;}
+}
+
+
 
 /* *************************************************************** modal *************************************************************** */
 .overlay {z-index: 3 !important; display: flex; justify-content: 7; align-items: center; position: fixed; top: 0; left: 0; height: 100%; width: 100%; background: rgba( 0, 0, 0, 0.8); animation: overlay-fondu .7s both ;}
