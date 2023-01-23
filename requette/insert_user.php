@@ -64,8 +64,8 @@ echo'test';
         // $req->bindParam(':user', $user/*, declare sont type (integer, string ...ect)*/);
     
         // grâce à bindParam j'affecter ma variable et mon parametre index 2 (?)
-        // $req->bindParam(2, $hash/*, declare sont type (integer, string ...ect)*/);
-
+        // $req->bindvValue(2, $hash/*, declare sont type (integer, string ...ect)*/);
+        
         $req2->execute([
             ':img' => $img,
             ':name' => $name,

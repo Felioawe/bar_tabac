@@ -116,15 +116,15 @@ $results2 = $req2->fetchAll(PDO::FETCH_ASSOC);
                     <tbody>
                         <tr class="cadre-or">
                             <td data-target="Update_id-produit" class="text-red text-capitalize fw-bold ps-2 py-2 px-0" scope="row"><?= $produit['id_produit'] ?></td>
-                            <td data-target="Update_categorie" class="text-muted text-capitalize ps-2 py-2"><?= $produit['categorie'] ?></td>
-                            <td data-target="Update_produit" class="text-muted text-capitalize ps-2 py-2"><?= $produit['produit'] ?></td>
-                            <td data-target="Update_nb" class="text-muted text-capitalize ps-2 py-2"><?= $produit['nb'] ?></td>
-                            <td data-target="Update_prix" class="text-muted text-capitalize ps-2 py-2"><?= $produit['prix'] ?></td>
-                            <td data-target="Update_ttc" class="text-muted text-capitalize ps-2 py-2"><?= $produit['ttc'] ?></td>
-                            <td data-target="Update_date" class="text-muted text-capitalize ps-2 py-2"><?= $produit['date'] ?></td>
+                            <td data-target="Update_categorie" class="text-gray text-capitalize ps-2 py-2"><?= $produit['categorie'] ?></td>
+                            <td data-target="Update_produit" class="text-gray text-capitalize ps-2 py-2"><?= $produit['produit'] ?></td>
+                            <td data-target="Update_nb" class="text-gray text-capitalize ps-2 py-2"><?= $produit['nb'] ?></td>
+                            <td data-target="Update_prix" class="text-gray text-capitalize ps-2 py-2"><?= $produit['prix'] ?></td>
+                            <td data-target="Update_ttc" class="text-gray text-capitalize ps-2 py-2"><?= $produit['ttc'] ?></td>
+                            <td data-target="Update_date" class="text-gray text-capitalize ps-2 py-2"><?= $produit['date'] ?></td>
                             <?php if ($_SESSION['connect'] == 1 && $_SESSION['status'] == 'admi') : ?>
-                                <td class="text-muted"><button class="ButUpdateStock butUpdate ms-2 my-2">Modifier</button></td>
-                                <td class="text-muted">
+                                <td class="text-gray"><button class="ButUpdateStock butUpdate ms-2 my-2">Modifier</button></td>
+                                <td class="text-gray">
                                     <form id="form_delete_user" action="./stock.php" method="get">
                                         <input type="hidden" name="id" value="<?= $produit['id_produit'] ?>">
                                         <input type="hidden" name="mod" value="3">

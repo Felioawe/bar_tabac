@@ -31,7 +31,7 @@
                 </div>
             </div>
             <div class="col-12 col-lg-8 px-3 mt-5">
-                <form id="#form_contact" action="./requette/insert_contact.php" method="post">
+                <form id="form_contact" action="./requette/insert_contact.php" method="post">
                     <div class="row">
                         <div class="col-12 col-sm-7 position-relative">
                             <input class="input-contact w-100 mb-3 bg-secondary p-2 text-white bg-opacity-25" type="text" id="name" name="name" placeholder="Votre nom">

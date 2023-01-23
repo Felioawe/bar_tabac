@@ -41,14 +41,14 @@ $results = $req->fetchAll(PDO::FETCH_ASSOC);
                     <tbody>
                         <tr>
                             <td data-target="Update_id-user" class="fw-bold text-red text-capitalize ps-2"><?= $user['id_user']; ?></td>
-                            <td data-target="Update_name" class="text-muted text-capitalize ps-2 py-2"><?= $user['name']; ?></td>
-                            <td data-target="Update_user" class="text-muted text-capitalize ps-2 py-2"><?= $user['user']; ?></td>
-                            <td data-target="Update_tel" class="text-muted text-capitalize ps-2 py-2"><?= $user['tel']; ?></td>
-                            <td data-target="Update_email" class="text-muted text-capitalize ps-2 py-2"><?= $user['email']; ?></td>
-                            <td class="text-muted text-uppercase pe-2 py-2"><?= $user['status']; ?></td>
+                            <td data-target="Update_name" class="text-gray text-capitalize ps-2 py-2"><?= $user['name']; ?></td>
+                            <td data-target="Update_user" class="text-gray text-capitalize ps-2 py-2"><?= $user['user']; ?></td>
+                            <td data-target="Update_tel" class="text-gray text-capitalize ps-2 py-2"><?= $user['tel']; ?></td>
+                            <td data-target="Update_email" class="text-gray text-capitalize ps-2 py-2"><?= $user['email']; ?></td>
+                            <td class="text-gray text-uppercase pe-2 py-2"><?= $user['status']; ?></td>
                             <?php if ($_SESSION['connect'] == 1 && $_SESSION['status'] == 'admi' ) : ?>
-                                <td class="text-muted"><button class="ButUpdateLogin butUpdate ps-2 my-2 text-capitalize">Modifier</button></td>
-                                <td class="text-muted">
+                                <td class="text-gray"><button class="ButUpdateLogin butUpdate ps-2 my-2 text-capitalize">Modifier</button></td>
+                                <td class="text-gray">
                                     <form id="form_delete_user" action="./compte.php" method="get">
                                         <input type="hidden" name="id" value="<?= $user['id_user']; ?>">
                                         <input type="hidden" name="mod" value="3">
