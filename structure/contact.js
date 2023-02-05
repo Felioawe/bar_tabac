@@ -28,10 +28,6 @@ $('.input-contact').on('input', Check_conctactRegex);
 
 $('#form_contact').on('submit', (e) => {
 
-console.log($('.form-regex-green').length) ;
-console.log(nb_champ);
-console.log(inputs);
-
     if ($('.form-regex-green').length != nb_champ) {
         e.preventDefault();
     }

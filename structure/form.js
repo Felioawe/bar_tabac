@@ -133,16 +133,7 @@ function openUpadateLogin() {
             }
         });
 
-        const searchParams = new URLSearchParams(window.location.search);
-        const paramValue = searchParams.get("erreur");
-    
-        if (paramValue == 1) {
-            $(".erreur_AddLogin").html(`
-            
-                <p class="text-red w-100 m-0">user est indisponible</p>
-            
-            `);
-        }
+        
     });
 }
 
